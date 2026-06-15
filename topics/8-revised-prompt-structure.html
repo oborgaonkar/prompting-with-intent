@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revised Prompt Structure | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Revised prompt structure</h1>
+        <p class="hero__lede">
+          A refined prompt structure that builds on the earlier framework with clearer context, constraints, and checks.
+        </p>
+      </section>
+
+      <p class="hero__lede">
+        The 3-part structure — task, context, output — tells the AI what you want. That's enough to get a response.
+        These nine components tell it how to think, what to know, and where the hard edges are. The difference shows up
+        in whether you spend the next ten minutes editing the output or using it.
+      </p>
+
+      <section class="content-section">
+        <h2>The components</h2>
+        <p>
+          Some of these belong in your system prompt and stay there — set once, always active. Others change with every
+          task. Knowing which is which saves more time than any other prompt habit.
+        </p>
+
+        <div class="component-header">
+          <span>Component</span>
+          <span>Description</span>
+          <span>Why it matters</span>
+        </div>
+
+        <p class="tier">Mandatory</p>
+        <div class="component-table">
+          <div class="component-row">
+            <span class="pill pill-task">task</span>
+            <p class="component-does">What you want the AI to do. Always required.</p>
+            <p class="component-breaks">Nothing works. This is the minimum.</p>
+          </div>
+        </div>
+
+        <p class="tier">Important</p>
+        <div class="component-table">
+          <div class="component-row">
+            <span class="pill pill-context">context</span>
+            <p class="component-does">Background that shapes the response — who, what, where, why.</p>
+            <p class="component-breaks">You get a technically correct answer to the wrong problem.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-grounding">grounding</span>
+            <p class="component-does">Source material to anchor the response. Docs, data, specs.</p>
+            <p class="component-breaks">The AI fills gaps with confident, plausible fiction. Field names get invented.
+              Assumptions go unstated.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-rules">rules</span>
+            <p class="component-does">Hard boundaries. What the AI must always or never do.</p>
+            <p class="component-breaks">You re-state the same constraints in every prompt — or forget once and get
+              something you have to undo.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-skills">skills</span>
+            <p class="component-does">Domain expertise to load. Shifts the AI from generalist to specialist.</p>
+            <p class="component-breaks">Responses read like they came from someone who googled the topic, not someone
+              who works in it.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-reasoning">reasoning</span>
+            <p class="component-does">How to think through the problem — steps, logic, what to consider before
+              responding.</p>
+            <p class="component-breaks">The AI jumps to an answer. Edge cases you care about get skipped.</p>
+          </div>
+        </div>
+
+        <p class="tier">Good to have</p>
+        <div class="component-table">
+          <div class="component-row">
+            <span class="pill pill-role">role</span>
+            <p class="component-does">Persona to adopt. Shapes tone, perspective, and level of expertise.</p>
+            <p class="component-breaks">Tone is off. Too technical, too generic, or pitched at the wrong seniority
+              level.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-constraints">constraints</span>
+            <p class="component-does">Scope limits — length, format, topics to avoid, assumptions to make.</p>
+            <p class="component-breaks">Output is the right idea in the wrong shape. You edit format instead of
+              content.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-examples">examples</span>
+            <p class="component-does">Show the AI what good looks like — style, structure, tone reference.</p>
+            <p class="component-breaks">The AI interprets "good" on its own. Usually fine. Often not quite right.</p>
+          </div>
+          <div class="component-row">
+            <span class="pill pill-output">output</span>
+            <p class="component-does">Desired format of the response — list, table, markdown, JSON, plain text.</p>
+            <p class="component-breaks">You get prose when you needed a table, or markdown when you needed plain
+              text.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p><strong>Set once, use always</strong></p>
+          <p>Rules, skills, and role belong in your system prompt. Define them at the start of a project and they stay
+            active for every prompt after that. Everything else — task, context, grounding, reasoning, constraints,
+            examples, output — gets written per task.</p>
+        </div>
+
+        <p>
+          Grounding is the component that does the most work for Salesforce designers. It gets its own section —
+          including a full list of resources you can use to ground any prompt.
+          <a href="5-grounding.html">Go to the grounding section</a>.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

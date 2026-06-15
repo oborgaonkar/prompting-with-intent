@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules and Skills | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Rules and Skills</h1>
+        <p class="hero__lede">
+          Rules and Skills are repeatable instructions that can be used to improve the quality of the output.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Rules</h2>
+        <p>
+          <strong>Definition : </strong>Short, persistent "Do" or "Don't" instructions that are supposed to be followed
+          for every prompt in your current workspace.
+        </p>
+        <p>
+          <strong>Example : </strong>
+        <ul>
+          <li>Always use SLDS component names, never invent custom component labels</li>
+          <li>Never suggest a new pattern if an existing SLDS component covers the use case</li>
+          <li>Always flag accessibility issues before suggesting visual changes</li>
+        </ul>
+        </p>
+        <p>Can be thought of as a "code of conduct" or "guardrails" for the AI.</p>
+        <p>Rules govern every response</p>
+        <p>In Claude.ai, rules live in your Project instructions. In Cursor, they live in your .cursor/rules/*.mdc (latest) or .cursorrules (older versions) file. Set
+          them once and they're active for every prompt in that context.</p>
+
+      </section>
+
+      <section class="content-section">
+        <h2>Skills</h2>
+        <p>
+          <strong>Definition : </strong>Skills are reusable instruction sets that teach the AI how to behave in a
+          specific domain.
+        </p>
+        <p>
+          <strong>Example : </strong>
+        <ul>
+          <li>"Review any design description or component spec against WCAG 2.1 AA. Flag contrast issues, missing focus
+            states, touch target sizes, and screen reader considerations. Be specific about what fails and why."</li>
+          <li>"You are a design director. When I share work, evaluate it across: user clarity, business alignment,
+            technical feasibility, and consistency with existing patterns. Give me the hard feedback, not the kind
+            version."</li>
+          <li>"When I describe a product problem, help me think upstream. Push back if I'm jumping to solutions. Ask
+            about the job to be done, what success looks like in 6 months, and what we'd need to believe for this to
+            work."</li>
+        </ul>
+        </p>
+        <p>Can be thought of as a "expertise" for the AI.</p>
+        <p>Skills activate a mode of thinking. </p>
+        <p>In Claude.ai, skills live in your Project instructions alongside your rules. In Cursor, they go in your
+          .cursor/rules/*.mdc (latest) or .cursorrules (older versions) file as a named block. In a Slackbot, they live in the system prompt configured when the bot is
+          set up. In all three cases, the principle is the same: you write the expertise once, and the AI carries it
+          into every interaction.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

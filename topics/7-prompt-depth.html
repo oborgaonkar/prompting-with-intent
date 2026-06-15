@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Depth | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Prompt Depth</h1>
+        <p class="hero__lede">
+          Prompt depth is about telling the AI how much thinking, detail, and verification the task actually needs.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Why Depth Matters</h2>
+        <p>
+          Not every prompt needs a long answer. Simple tasks need speed and clarity. Complex tasks need reasoning,
+          tradeoffs, edge cases, and checks. If you do not set the depth, the AI guesses how much work to do.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <p>
+          Depth is not the same as specificity. Specificity is about how much direction you give the AI — how tightly you define the what, the who, and the constraints. Depth is about how much thinking you ask it to do with that direction. You can write a highly specific prompt and still get a shallow answer. You can write a loose prompt and ask for deep reasoning. They are separate dials. You control both.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Three Useful Levels</h2>
+        <ul>
+          <li><strong>Quick:</strong> Use this when you need a short answer, a definition, or a small edit.<br>Example: "Flag any accessibility issues in this component." Use this when you need a fast sanity check before a handoff. You're not looking for a full audit, just a quick scan for obvious problems.</li>
+          <li><strong>Standard:</strong> Use this when you need a useful explanation with examples or next steps.<br>Example: "Review this onboarding flow for accessibility issues. For each problem you find, tell me what's failing and suggest one fix." Use this when you need something actionable enough to brief a developer or write a ticket.</li>
+          <li><strong>Deep:</strong> Use this when the task has risk, ambiguity, multiple options, or important consequences.<br>Example: "Audit this onboarding flow against WCAG 2.1 AA. For each failure, tell me the criterion it violates, who it affects and how, and give me two options for fixing it, one quick and one thorough. Flag anything that's a borderline pass. End with a prioritized list ranked by impact on users with screen readers." Use this when the work has real stakes, a client review, a compliance requirement, or a flow going to production.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>How to Ask for Depth</h2>
+        <p>
+          Add a sentence that describes the level of effort you want: "Give me the short version first," "Compare the
+          tradeoffs before recommending one," or "Think through edge cases and tell me what could go wrong." This helps
+          the AI match the answer to the job instead of over-explaining simple things or under-thinking hard ones.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

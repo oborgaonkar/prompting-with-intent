@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iteration &amp; Recovery | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Iteration &amp; Recovery</h1>
+        <p class="hero__lede">
+          Getting a bad output isn't a failure. It's information. The question is what you do with it.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>The three things that go wrong</h2>
+        <p>Most missed outputs come from one of three places.</p>
+        <p><strong>The task was unclear.</strong> The AI produced something, just not what you needed. The what, the
+          who, or the why wasn't defined, so it filled those gaps with its defaults.</p>
+        <p><strong>The context was missing.</strong> The output was reasonable in the abstract but wrong for your
+          situation. The AI didn't know enough about your project or your constraints to give you something useful.</p>
+        <p><strong>The depth was wrong.</strong> Too shallow, or too much. The AI guessed how much work to do, and got
+          it wrong.</p>
+        <p>Figure out which one you're dealing with before you re-prompt. Otherwise you're just guessing twice.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Refine or restart</h2>
+        <p>Not every missed output needs a fresh start. One question helps: is the conversation still good context, or
+          is it now pulling the AI toward the wrong answer?</p>
+        <p>Refine when the output was close. When the miss was a format or depth issue. When the AI still has the right
+          general understanding of what you need.</p>
+        <p>Restart when the AI keeps returning to a wrong interpretation. When the conversation has drifted too far to
+          correct. When you realize the original prompt was missing something structural, like grounding or a key
+          constraint.</p>
+        <p>Quick test: summarize what the AI currently thinks you want. If that summary is wrong, restart. The working
+          model is the problem, not just the last output.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>What to add in your next prompt</h2>
+        <p>When you refine, be specific about what missed. Vague corrections produce vague fixes.</p>
+        <p>
+        <ul>
+          <li> <strong>Unclear task:</strong> restate it with more specificity.</li>
+          <li> <strong>Missing context:</strong> add the grounding you left out.</li>
+          <li> <strong>Wrong depth:</strong> say so directly, don't hint at it.</li>
+          <li> <strong>Wrong format:</strong> show it an example of what you wanted.</li>
+        </ul>
+        </p>
+        <p>One change at a time. If you rewrite the whole prompt at once, you won't know what fixed it.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>The prompt that covers most recoveries</h2>
+        <p>When you're stuck, this covers most situations:</p>
+        <p class="prompt-example">'That didn't land. Here's what I was actually looking for: [describe it]. Here's what was wrong: [be
+          specific]. Try again.'</p>
+        <p>Two blanks. If you can't fill them in, the problem is your own clarity, not the AI's output. That's useful to
+          know too.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

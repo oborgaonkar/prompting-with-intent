@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directed vs. Discovered | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Directed vs. Discovered</h1>
+        <p class="hero__lede">
+          Are you executing a vision, or leaving room for the AI to surprise you? Know which one before you start.<br />
+          The same way you might tell a barista 'surprise me' or order down to the temperature and the cup size.
+        </p>
+      </section>
+
+      <div class="example-tabs" data-tabs>
+        <div class="example-tabs__list" role="tablist" aria-label="Prompt specificity examples">
+          <button class="example-tabs__tab is-active" id="example-1-tab" type="button" role="tab" aria-selected="true"
+            aria-controls="example-1-panel" data-tab-target="example-1-panel">
+            Example 1
+          </button>
+          <button class="example-tabs__tab" id="example-2-tab" type="button" role="tab" aria-selected="false"
+            aria-controls="example-2-panel" data-tab-target="example-2-panel">
+            Example 2
+          </button>
+          <button class="example-tabs__tab" id="example-3-tab" type="button" role="tab" aria-selected="false"
+            aria-controls="example-3-panel" data-tab-target="example-3-panel">
+            Example 3
+          </button>
+        </div>
+
+        <div class="example-tabs__panel" id="example-1-panel" role="tabpanel" aria-labelledby="example-1-tab">
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Coffee</h3>
+              <p>You're handing the wheel to the AI entirely. No direction, no constraints. What comes back is pure AI.
+                Its interpretation, its defaults, its creative choices. Sometimes that's exactly what you want.
+                Sometimes it surprises you in ways you wouldn't have thought of yourself.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Summarize my research notes
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced coffee</h3>
+              <p>You've set a general direction but left the details open. The AI knows roughly where to go but makes
+                most of the creative decisions along the way. Good when you have a starting point in mind but want the
+                AI to fill the space.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Summarize these 5 user interviews and find common themes
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced oat latte, two shots</h3>
+              <p>You're in the driver's seat. You've defined the what and the why — the AI handles the how. The creative
+                space is narrower, the output is closer to your vision. Iteration at this level is refinement, not
+                redirection.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Analyze these interview transcripts from mid-market operations managers. Identify pain points around
+              approval workflows, rank them by frequency, and flag any quotes worth keeping for a stakeholder
+              presentation
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced oat latte, two shots, light ice, vanilla, in a venti cup</h3>
+              <p>You know exactly what you want. The AI is executing your vision, not contributing its own. There's
+                little room for surprise — but there's also little room for drift. This is the level you want when the
+                output needs to match something specific you already have in mind.
+              </p>
+            </div>
+            <div class="prompt-example">
+              You are a senior UX researcher. Here are 12 interview transcripts from operations managers at mid-market
+              logistics companies. Synthesize the findings into: top 5 pain points ranked by frequency, behavioral
+              patterns across segments, one HMW per theme, and a one-page executive summary framed around business
+              impact. Flag any contradictions between what users said and what they did. Output in a format ready to
+              paste into a Confluence page.
+            </div>
+          </section>
+        </div>
+
+        <div class="example-tabs__panel" id="example-2-panel" role="tabpanel" aria-labelledby="example-2-tab" hidden>
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Coffee</h3>
+              <p>You're handing the wheel to the AI entirely. No direction, no constraints. What comes back is pure AI.
+                Its interpretation, its defaults, its creative choices. Sometimes that's exactly what you want.
+                Sometimes it surprises you in ways you wouldn't have thought of yourself.
+            </div>
+            <div class="prompt-example">
+              Is this design good?
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced coffee</h3>
+              <p>You've set a general direction but left the details open. The AI knows roughly where to go but makes
+                most of the creative decisions along the way. Good when you have a starting point in mind but want the
+                AI to fill the space.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Review my onboarding flow and give feedback
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced oat latte, two shots</h3>
+              <p>You're in the driver's seat. You've defined the what and the why — the AI handles the how. The creative
+                space is narrower, the output is closer to your vision. Iteration at this level is refinement, not
+                redirection.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Review this 5-step onboarding flow for a B2B SaaS tool targeting non-technical users. Flag any steps where
+              cognitive load is too high and suggest simplifications.
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced oat latte, two shots, light ice, vanilla, in a venti cup</h3>
+              <p>You know exactly what you want. The AI is executing your vision, not contributing its own. There's
+                little room for surprise — but there's also little room for drift. This is the level you want when the
+                output needs to match something specific you already have in mind.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Act as a senior product designer who specializes in B2B SaaS onboarding. Review this flow against these
+              criteria: time-to-value, cognitive load per step, and drop-off risk. For each screen, tell me what's
+              working, what's a problem, and one specific change. End with a prioritized list of fixes ranked by impact.
+              Be direct — I don't need encouragement, I need the hard
+              feedback.
+            </div>
+          </section>
+        </div>
+
+        <div class="example-tabs__panel" id="example-3-panel" role="tabpanel" aria-labelledby="example-3-tab" hidden>
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Coffee</h3>
+              <p>You're handing the wheel to the AI entirely. No direction, no constraints. What comes back is pure AI.
+                Its interpretation, its defaults, its creative choices. Sometimes that's exactly what you want.
+                Sometimes it surprises you in ways you wouldn't have thought of yourself.
+            </div>
+            <div class="prompt-example">
+              Design a login page
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced coffee</h3>
+              <p>You've set a general direction but left the details open. The AI knows roughly where to go but makes
+                most of the creative decisions along the way. Good when you have a starting point in mind but want the
+                AI to fill the space.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Design a login page for a partner portal with email and password fields
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced oat latte, two shots</h3>
+              <p>You're in the driver's seat. You've defined the what and the why — the AI handles the how. The creative
+                space is narrower, the output is closer to your vision. Iteration at this level is refinement, not
+                redirection.
+              </p>
+            </div>
+            <div class="prompt-example">
+              Design a login page for a B2B partner portal. Include email and password fields, a forgot password link,
+              and a company logo placeholder. The audience is external partners — resellers and consultants — so it
+              needs to feel professional and trustworthy. Use our brand colors and follow SLDS guidelines.
+            </div>
+          </section>
+
+          <section class="prompt-level-row">
+            <div class="prompt-level-row__copy">
+              <h3>Iced oat latte, two shots, light ice, vanilla, in a venti cup</h3>
+              <p>You know exactly what you want. The AI is executing your vision, not contributing its own. There's
+                little room for surprise — but there's also little room for drift. This is the level you want when the
+                output needs to match something specific you already have in mind.
+              </p>
+            </div>
+            <div class="prompt-example">
+              You are a senior product designer specializing in B2B enterprise portals. Design a login page for a
+              Salesforce Experience Cloud partner portal used by external resellers and consulting partners.
+              The page must include:
+              <ul>
+                <li>Company logo top center</li>
+                <li>Email and password fields with inline validation</li>
+                <li>Forgot password and SSO login options</li>
+                <li>A trust signal — partners need to feel this is secure</li>
+                <li>Error states for incorrect credentials and locked accounts</li>
+              </ul>
+              <br>
+              Context:
+              <ul>
+                <li>Partners log in infrequently, so they often forget credentials — reduce friction around recovery
+                </li>
+                <li>Some partners are non-technical, so error messages must be plain language</li>
+                <li>Must follow SLDS component guidelines and map to our existing Figma token library</li>
+                <li>Responsive — partners access this on both desktop and tablet</li>
+              </ul>
+
+              Do not use generic placeholder copy. Write real microcopy for every label, error state, and helper text.
+              Output as an annotated Figma-ready component breakdown with a note on accessibility considerations for
+              each
+              element.
+            </div>
+          </section>
+        </div>
+      </div>
+      <section class="content-section">
+        <h2>A note on over-specifying</h2>
+        <p>The fully specified prompt is not always the right prompt. When you close every gap, you remove every
+          surprise. Sometimes that's exactly what you need — output that matches something specific you already have
+          in mind. But sometimes the constraint you added is the thing that killed the idea you needed.
+          The skill isn't writing the longest prompt. It's knowing which gaps are worth closing for this specific
+          task, and which ones are worth leaving open. A senior designer asking for a design direction probably wants
+          the iced oat latte. The same designer exploring a problem they don't fully understand yet might get more
+          from the iced coffee.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

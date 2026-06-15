@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Output Evaluation | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Output Evaluation</h1>
+        <p class="hero__lede">
+          Most people evaluate output by feel. It seemed right, so they used it. That works until it doesn't. And when it doesn't, the mistake was usually confident enough to look correct.
+        </p>
+      </section>
+      <section class="content-section">
+        <h2>A simple evaluation prompt</h2>
+        <p>When you want the AI to check before you do:</p>
+        <p class="prompt-example">'Before I review this, check it yourself. Does it answer the original question? What assumptions did you make that I should verify? Where are you least confident? Flag anything that could be wrong for a &lt;context&gt;.'</p>
+        <p>Change the last sentence to fit your domain. The first three work for almost anything.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Why evaluation is a prompting skill</h2>
+        <p>Evaluating output isn't something you do after prompting. It's part of the prompt. You can ask the AI to check its own work, surface its assumptions, and test its answer against your criteria before you read a word of it.</p>
+        <p>It won't catch everything. But it catches more than a quick read does, and it forces the kind of review that's easy to skip when you're moving fast.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Four things worth building in</h2>
+        <p>Ask it to critique its own answer. 'Review what you just wrote. Does it actually answer what I asked? What's the weakest part?' Simple, and most people never do it.</p>
+        <p>Ask it to list its assumptions. Every output is built on things you didn't say. 'List the assumptions you made that I should verify.' That list is usually where the problems are.</p>
+        <p>Ask it to flag uncertainty. AI writes confident prose even when the reasoning is thin. 'Tell me where you're least confident and why' breaks that habit fast.</p>
+        <p>Ask it to check against something specific. 'Check this against WCAG 2.1 AA. Tell me what fails and what you're unsure about.' The more specific the standard, the more useful the answer.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Wrong vs. useless</h2>
+        <p>Not all bad output is wrong. Some of it is technically correct and completely useless — generic advice that ignores your constraints, a design suggestion that doesn't fit the system you're building in.</p>
+        <p>Wrong output is easy to catch. Useless output passes a quick read and costs you time later.</p>
+        <p>That's a grounding problem, not an evaluation problem. If the AI doesn't know your context, no amount of self-critique will make the output specific enough to use. Evaluation catches mistakes. Grounding prevents the more common one.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

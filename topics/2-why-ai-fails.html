@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Why AI Fails Predictably? | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+      <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+            <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <p class="eyebrow">Topic guide</p>
+        <h1>Why AI Fails Predictably?</h1>
+        <p class="hero__lede">
+            AI does not fail randomly. When you leave a gap in your prompt, it fills that gap
+            with the most statistically average answer from its training. The failures are
+            predictable once you see them as missing context, not missing intelligence.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Some Examples</h2>
+        <p>
+          AI is smart at some tasks and limited at others. It can summarize, translate, classify, generate ideas, and
+          spot patterns across large amounts of information. It does not understand the world the same way people do,
+          and it can make confident mistakes when it lacks context or reliable evidence.
+        </p>
+        <button class="example-reveal__button" type="button" aria-expanded="false"
+          data-example-reveal-group="right-examples">
+          Show all corrections
+        </button>
+        <div class="examples-comparison" aria-label="Side-by-side AI answer examples">
+          <article class="example-pair">
+            <div class="example-card">
+                <h3>ChatGPT first try</h3>
+              <img src="../assets/chatgpt-wrong.png" alt="Incorrect ChatGPT answer example">
+            </div>
+            <div class="example-card example-result" data-example-group="right-examples" hidden>
+                <h3>ChatGPT after checking</h3>
+              <img src="../assets/chatgpt-right.png" alt="Corrected ChatGPT answer example">
+            </div>
+          </article>
+
+          <article class="example-pair">
+            <div class="example-card">
+                <h3>Claude first try</h3>
+              <img src="../assets/claude-wrong.png" alt="Incorrect Claude answer example">
+            </div>
+            <div class="example-card example-result" data-example-group="right-examples" hidden>
+                <h3>Claude after checking</h3>
+              <img src="../assets/claude-right.png" alt="Corrected Claude answer example">
+            </div>
+          </article>
+
+          <article class="example-pair">
+            <div class="example-card">
+                <h3>Gemini first try</h3>
+              <img src="../assets/gemini-wrong.png" alt="Incorrect Gemini answer example">
+            </div>
+            <div class="example-card example-result" data-example-group="right-examples" hidden>
+                <h3>Gemini after checking</h3>
+              <img src="../assets/gemini-right.png" alt="Corrected Gemini answer example">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--<section class="content-section">
+          <h2>What Makes AI Seem Smart</h2>
+          <ul>
+            <li>It can learn patterns from large examples and apply them to new prompts.</li>
+            <li>It can respond quickly in natural language, which makes the interaction feel human.</li>
+            <li>It can combine ideas from many domains, but it still needs clear goals and careful checking.</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>A Useful Way to Think About It</h2>
+          <p>
+            Treat AI as a capable assistant, not an all-knowing expert. It is strongest when you give it a specific task, enough context, and a way to verify the result.
+          </p>
+        </section>-->
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

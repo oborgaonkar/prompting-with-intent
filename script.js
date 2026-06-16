@@ -5,16 +5,17 @@
       href: "index.html"
     },
     {
-      label: "Thesis",
-      href: "topics/1-thesis.html"
+      label: "Why AI Fails Predictably?",
+      href: "topics/2-why-ai-fails.html"
+    },
+    {
+      label: "Lets Go On A Trip",
+      href: "topics/1-lets-go-on-a-trip.html"
     },
     {
       heading: "Topics",
       links: [
-        {
-          label: "Why AI Fails Predictably?",
-          href: "topics/2-why-ai-fails.html"
-        },
+        
         {
           label: "General Prompt Structure",
           href: "topics/3-general-prompt-structure.html"
@@ -28,17 +29,18 @@
           href: "topics/7-prompt-depth.html"
         },
         {
-          label: "Rules and Skills",
-          href: "topics/4-rules-and-skills.html"
-        },
-        {
           label: "Grounding",
           href: "topics/5-grounding.html"
         },
         {
-          label: "Revised Prompt Structure",
-          href: "topics/8-revised-prompt-structure.html"
-        },
+          label: "Rules and Skills",
+          href: "topics/4-rules-and-skills.html"
+        }
+      ]
+    },
+    {
+      heading: "Closing",
+      links: [
         {
           label: "Output Evaluation",
           href: "topics/9-output-evaluation.html"
@@ -46,12 +48,7 @@
         {
           label: "Iteration & Recovery",
           href: "topics/10-iteration-and-recovery.html"
-        }
-      ]
-    },
-    {
-      heading: "Closing",
-      links: [
+        },
         {
           label: "Closing / Cheat Sheet",
           href: "topics/11-cheat-sheet.html"
@@ -61,7 +58,8 @@
   ];
 
   function getPathPrefix() {
-    return window.location.pathname.indexOf("/topics/") !== -1 ? "../" : "";
+    var path = window.location.pathname;
+    return path.indexOf("/topics/") !== -1 || path.indexOf("/slides/") !== -1 ? "../" : "";
   }
 
   function getCurrentPage() {
@@ -216,6 +214,40 @@
         tabs[nextIndex].focus();
         setActiveTab(tabs[nextIndex]);
       });
+    });
+  });
+
+  document.querySelectorAll("[data-spec-slider]").forEach(function (slider) {
+    var range = slider.querySelector("[data-spec-range]");
+
+    if (!range) {
+      return;
+    }
+
+    var texts = slider.querySelectorAll("[data-spec-text]");
+    var stops = slider.querySelectorAll("[data-spec-stop]");
+
+    function update() {
+      texts.forEach(function (text) {
+        text.classList.toggle("is-selected", text.dataset.specText === range.value);
+      });
+
+      stops.forEach(function (stop) {
+        stop.classList.toggle("is-active", stop.dataset.specStop === range.value);
+      });
+    }
+
+    range.addEventListener("input", update);
+    update();
+  });
+
+  document.querySelectorAll("[data-reveal-target]").forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      var target = document.getElementById(trigger.dataset.revealTarget);
+
+      if (target) {
+        target.hidden = false;
+      }
     });
   });
 

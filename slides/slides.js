@@ -72,7 +72,7 @@
 
     if (collected.length === 0) {
       var empty = document.createElement("li");
-      empty.className = "cheat__empty";
+      empty.className = "prompt_lever_container";
       empty.textContent = "Your takeaways collect here, one per slide, as we move through the talk.";
       container.appendChild(empty);
       return;

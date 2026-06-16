@@ -39,10 +39,15 @@ a {
 
 .deck {
   display: grid;
-  grid-template-columns: 15fr 60fr 25fr;
+  grid-template-columns: 15fr 85fr;
   height: 100vh;
   width: 100%;
   animation: deck-fade-in 420ms ease both;
+}
+
+/* Restore the third column when the cheat sheet is present. */
+.deck:has(.deck__col--cheat) {
+  grid-template-columns: 15fr 60fr 25fr;
 }
 
 @keyframes deck-fade-in {
@@ -153,6 +158,50 @@ a {
   color: var(--accent);
 }
 
+/* ---------- Column 1: site-style navigation (shared with index.html) ---------- */
+
+.site-nav,
+.site-nav__section {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.site-nav__section {
+  margin-top: 1rem;
+}
+
+.site-nav__heading {
+  margin: 0 0 0.2rem;
+  padding: 0 0.75rem;
+  color: var(--text-subtle);
+  font-size: 0.73rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-nav__link {
+  border-radius: 0.65rem;
+  color: var(--text-muted);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+  background: var(--bg-muted);
+  color: var(--text);
+  outline: none;
+}
+
+.site-nav__link.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* ---------- Column 2: spotlight + detail ---------- */
 
 .eyebrow {
@@ -226,6 +275,7 @@ a {
 .joke__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 1rem;
 }
 
@@ -319,7 +369,7 @@ a {
 
 /* ---------- Column 3: cheat sheet ---------- */
 
-.cheat__heading {
+.prompt_heading {
   margin: 0 0 1.25rem;
   color: var(--text-subtle);
   font-size: 0.7rem;
@@ -328,7 +378,7 @@ a {
   text-transform: uppercase;
 }
 
-.cheat__list {
+.prompt_lever_content {
   display: grid;
   gap: 0.85rem;
   margin: 0;
@@ -378,7 +428,7 @@ a {
   line-height: 1.5;
 }
 
-.cheat__empty {
+.prompt_lever_container {
   padding: 1rem;
   border: 1px dashed var(--border);
   border-radius: 0.75rem;
@@ -390,11 +440,16 @@ a {
 
 .deck-controls {
   position: fixed;
-  right: calc(25% + 1.25rem);
+  right: 1.25rem;
   bottom: 1.25rem;
   z-index: 20;
   display: inline-flex;
   gap: 0.5rem;
+}
+
+/* Nudge controls clear of the cheat sheet column when it is present. */
+body:has(.deck__col--cheat) .deck-controls {
+  right: calc(25% + 1.25rem);
 }
 
 .deck-controls__btn {

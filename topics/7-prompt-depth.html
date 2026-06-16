@@ -39,12 +39,12 @@
         <p class="eyebrow">Topic guide</p>
         <h1>Prompt Depth</h1>
         <p class="hero__lede">
-          Prompt depth is about telling the AI how much thinking, detail, and verification the task actually needs.
+          Prompt depth is about telling the AI how much thinking, detail, and verification the task actually needs. <br />  It's also called reasoning effort or thinking level,
         </p>
       </section>
 
-      <section class="content-section">
-        <h2>Why Depth Matters</h2>
+      <section class="content-section callout">
+         
         <p>
           Not every prompt needs a long answer. Simple tasks need speed and clarity. Complex tasks need reasoning,
           tradeoffs, edge cases, and checks. If you do not set the depth, the AI guesses how much work to do.
@@ -75,6 +75,36 @@
         </p>
       </section>
     </main>
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Trip to Japan</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Plan a trip to Japan.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">Who's going.</p>
+          <p class="prompt_lever_text">When.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A day-by-day itinerary</p>
+        </div>
+        <div class="prompt_lever_container" >
+          <p class="prompt_lever_label">Directions</p>
+          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko trip, no museums, hotels near a JR line.</p>
+        </div>
+        <div class="prompt_lever_container" >
+          <p class="prompt_lever_label">Effort</p>
+          <p class="prompt_lever_text">Think through the logistics, account for travel time between cities</p>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <script src="../script.js"></script>

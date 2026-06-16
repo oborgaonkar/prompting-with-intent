@@ -42,26 +42,25 @@
           Grounding gives AI the facts, sources, and constraints it needs to answer from reliable context instead of
           letting it generate from training data alone.
         </p>
+        <div class="callout">
+          <p>Before you make your request, answer these three questions in the prompt itself:</p>
+          <ul>
+            <li>What already exists</li>
+            <li>What you're trying to get to</li>
+            <li>What you've already tried, or ruled out</li>
+          </ul>
+        </div>
       </section>
 
       <section class="content-section">
         <h2>Why Grounding Matters</h2>
         <p>
           Without grounding, the AI fills gaps with the most statistically probable answer from its training. That's
-          where hallucinations come from. It's not lying — it's pattern-matching in the absence of facts. Grounding
+          where hallucinations come from. It's not lying, it's pattern-matching in the absence of facts. Grounding
           removes that gap.
         </p>
 
-        <div class="callout">
-          <p class="callout__label">Start here</p>
-          <p>Before writing any task prompt, answer these three questions inside it:</p>
-          <ul>
-            <li>Here is what exists already</li>
-            <li>Here is what I'm trying to achieve</li>
-            <li>Here is what I've already tried or ruled out</li>
-          </ul>
-          <p>This transfers to any domain</p>
-        </div>
+
       </section>
 
       <section class="content-section">
@@ -264,8 +263,42 @@
         </div>
       </section>
     </main>
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Trip to Japan</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Plan a trip to Japan.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">Who's going.</p>
+          <p class="prompt_lever_text">When.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A day-by-day itinerary</p>
+        </div>
+        <div class="prompt_lever_container" >
+          <p class="prompt_lever_label">Directions</p>
+          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko trip, no museums, hotels near a JR line.</p>
+        </div>
+        <div class="prompt_lever_container" >
+          <p class="prompt_lever_label">Effort</p>
+          <p class="prompt_lever_text">Think through the logistics, account for travel time between cities</p>
+        </div>
+        <div class="prompt_lever_container" >
+          <p class="prompt_lever_label">Grounding Details</p>
+          <p class="prompt_lever_text">Your actual travel dates, your real budget number, your visa situation, a note that you've already booked the Tokyo hotel</p>
+        </div>
+      </div>
+    </aside>
   </div>
-
+  
   <script src="../script.js"></script>
 </body>
 

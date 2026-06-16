@@ -25,6 +25,10 @@
           href: "topics/6-directed-vs-discovered.html"
         },
         {
+          label: "Process",
+          href: "topics/12-process.html"
+        },
+        {
           label: "Prompt Depth",
           href: "topics/7-prompt-depth.html"
         },

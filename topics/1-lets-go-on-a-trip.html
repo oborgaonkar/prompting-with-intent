@@ -102,7 +102,6 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <p class="eyebrow">A getaway</p>
         <h1>Let's go on a trip to Japan.</h1>
         <p class="hero__lede">
           Snow-capped mountains, neon city streets, ancient temples, and cherry
@@ -112,16 +111,15 @@
       </section>
 
       <section>
-        <button type="button" class="example-reveal__button" onclick="document.getElementById('trip-cheat-rail').hidden = false; this.hidden = true;">Plan
-          an itinerary for me</button>
+        <button class="button-secondary" onclick="document.getElementById('trip-rt-prompt').hidden = false; this.style.opacity = 0;">Lets start the prompt</p>
       </section>
 
       <section class="content-section">
         <div class="scrapbook">
           <span class="polaroid">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Mount_Fuji_at_sunset%2C_March_2025.jpg/1280px-Mount_Fuji_at_sunset%2C_March_2025.jpg"
-              alt="Snow-capped Mount Fuji glowing at sunset" loading="lazy">
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cherry-blossom-japan_%28Unsplash%29.jpg/1280px-Cherry-blossom-japan_%28Unsplash%29.jpg"
+              alt="A cherry blossom tree in full bloom in Japan" loading="lazy">
           </span>
           <span class="polaroid">
             <img
@@ -147,7 +145,7 @@
 
       </section>
     </main>
-    <aside class="rt-prompt">
+    <aside class="rt-prompt" id="trip-rt-prompt" hidden>
       <p class="prompt_heading">Trip to Japan</p>
       <div class="prompt_lever_content">
         <div class="prompt_lever_container">

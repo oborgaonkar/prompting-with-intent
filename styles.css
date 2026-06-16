@@ -366,6 +366,11 @@ p {
   padding-left: 1.25rem;
 }
 
+.no-bullets {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
 .callout {
   display: grid;
   gap: 0.85rem;
@@ -659,6 +664,22 @@ p {
   cursor: default;
 }
 
+.button-secondary {
+  color: var(--accent);
+  font-weight: 800;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.button-secondary:hover {
+  background: var(--accent-soft);
+}
+
 .example-result {
   display: grid;
   gap: 0.5rem;
@@ -744,8 +765,10 @@ p {
 }
 
 .spec-slider__text {
-  margin: 0;
-  text-align: center;
+  border: 2px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.7rem;
+  text-align: left;
   color: var(--text-subtle);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -754,7 +777,7 @@ p {
 
 .spec-slider__text.is-selected {
   color: var(--text);
-  font-weight: 750;
+  border: 2px solid var(--accent);
 }
 
 .add-to-prompt {

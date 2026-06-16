@@ -36,7 +36,6 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <p class="eyebrow">Topic guide</p>
         <h1>Directed vs. Discovered</h1>
         <p class="hero__lede">
           Are you executing a vision, or leaving room for the AI to surprise you? Know which one before you start.
@@ -47,8 +46,8 @@
         <h2>Make it a habit to chose what to specify</h2>
         <div class="spec-slider" data-spec-slider>
           <div class="spec-slider__ends">
-            <span>Vague</span>
-            <span>Precise</span>
+            <span>Discovered</span>
+            <span>Directed</span>
           </div>
           <div class="spec-slider__track">
             <input class="spec-slider__range" type="range" min="1" max="4" step="1" value="1"
@@ -61,19 +60,53 @@
             </div>
           </div>
           <div class="spec-slider__columns">
-            <p class="spec-slider__text prompt-example-simple is-selected" data-spec-text="1">Plan me anything in Japan.</p>
-            <p class="spec-slider__text prompt-example-simple" data-spec-text="2">Keep it relaxed, not a packed schedule.</p>
-            <p class="spec-slider__text prompt-example-simple" data-spec-text="3">Tokyo and Kyoto, food-focused, budget mid-range.</p>
-            <p class="spec-slider__text prompt-example-simple" data-spec-text="4">Three days Tokyo, four in Kyoto, max $200 a night, day four
-              open for a Nikko trip, no museums, hotels near a JR line.</p>
-          </div>
-          <div class="spec-slider__columns">
-            <p class="spec-slider__text is-selected " data-spec-text="1">You've handed over even the cities, budget, and interests. The AI picks everything.<br />Might surface a town you'd never have found</p>
-            <p class="spec-slider__text" data-spec-text="2">You're steering pace and feel, but still leaving cities, budget, and interests open.</p>
-            <p class="spec-slider__text" data-spec-text="3">Now cities, theme, and budget tier are fixed. The AI still owns the day-to-day.</p>
-            <p class="spec-slider__text" data-spec-text="4">You're specifying structure, constraints, and exclusions. The AI fills only the small gaps.<br/>Exactly what you pictured and nothing you didn't.<br/><button class="add-to-prompt" type="button" data-reveal-target="directions-lever">Add to Prompt</button></p>
-          </div>
-        </div>
+            <div class="spec-slider__text is-selected" data-spec-text="1">
+              <p>Plan a trip to Japan. (no constraints)</p>
+              <hr>
+              <ul class="no-bullets">
+                <li>🤖 Energy</li>
+                <li>🤖 City</li>
+                <li>🤖 Budget</li>
+                <li>🤖 Interests</li>
+              </ul>
+              <hr>
+              <p>Might surface a town you'd never have found</p>
+            </div>
+            <div class="spec-slider__text" data-spec-text="2">
+              <p>Keep it relaxed, not a packed
+                schedule.</p><hr>
+              <ul class="no-bullets">
+                <li>🧑‍🦲 Energy</li>
+                <li>🤖 City</li>
+                <li>🤖 Budget</li>
+                <li>🤖 Interests</li>
+              </ul>
+            </div>
+            <div class="spec-slider__text" data-spec-text="3">
+              <p>Tokyo and Kyoto, food-focused, budget
+                mid-range.</p><hr>
+              <ul class="no-bullets">
+                <li>🧑‍🦲 Energy</li>
+                <li>🧑‍🦲 City</li>
+                <li>🤖 Budget</li>
+                <li>🤖 Interests</li>
+              </ul>
+            </div>
+            <div class="spec-slider__text" data-spec-text="4">
+              <p>Three days Tokyo, four in Kyoto, max $200 a night, day for
+                open for a Nikko trip, no museums, hotels near a JR
+                line.</p><hr>
+              <ul class="no-bullets">
+                <li>🧑‍🦲 Energy</li>
+                <li>🧑‍🦲 City</li>
+                <li>🧑‍🦲 Budget</li>
+                <li>🧑‍🦲 Interests</li>
+              </ul><hr>
+              <p>Exactly what you pictured and nothing you didn't.</p>
+
+              <button class="add-to-prompt" type="button" data-reveal-target="directions-lever">Add to Prompt</button>
+
+            </div>
       </section>
     </main>
     <aside class="rt-prompt">
@@ -98,7 +131,8 @@
         </div>
         <div class="prompt_lever_container" id="directions-lever" hidden>
           <p class="prompt_lever_label">Directions</p>
-          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko trip, no museums, hotels near a JR line.</p>
+          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko
+            trip, no museums, hotels near a JR line.</p>
         </div>
       </div>
     </aside>

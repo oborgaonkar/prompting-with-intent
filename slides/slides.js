@@ -109,33 +109,6 @@
     window.location.href = slides[index].file;
   }
 
-  function renderControls() {
-    var controls = document.createElement("div");
-    controls.className = "deck-controls";
-
-    var prev = document.createElement("button");
-    prev.type = "button";
-    prev.className = "deck-controls__btn";
-    prev.textContent = "\u2190 Prev";
-    prev.disabled = currentIndex <= 0;
-    prev.addEventListener("click", function () {
-      go(currentIndex - 1);
-    });
-
-    var next = document.createElement("button");
-    next.type = "button";
-    next.className = "deck-controls__btn";
-    next.textContent = "Next \u2192";
-    next.disabled = currentIndex >= slides.length - 1;
-    next.addEventListener("click", function () {
-      go(currentIndex + 1);
-    });
-
-    controls.appendChild(prev);
-    controls.appendChild(next);
-    document.body.appendChild(controls);
-  }
-
   document.addEventListener("keydown", function (event) {
     var tag = (event.target && event.target.tagName) || "";
     if (tag === "INPUT" || tag === "TEXTAREA") {
@@ -200,6 +173,5 @@
 
   renderNav();
   renderCheatSheet();
-  renderControls();
   setupJokeReveal();
 })();

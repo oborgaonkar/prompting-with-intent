@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat Sheet | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <h1>Process</h1>
+        <p class="hero__lede">
+          Process is the how. Not what you want or how much thinking it needs, but the actual steps you want the agent
+          to follow to get there. When you know the method that produces a good answer, handing it over is often the
+          difference between a right answer and a confident wrong one.
+        </p>
+      </section>
+      <div class="callout">
+        <p>Depth tells the agent how hard to think. Process tells it how to think. Same goal, different lever: one sets
+          the effort, the other sets the method.</p>
+      </div>
+      <section class="content-section">
+        <h2>Why it matters</h2>
+        <p>Most prompts describe a destination and leave the route entirely to the agent. Sometimes that's fine. But for
+          tasks where the way you reach the answer determines whether it's correct, leaving the route open is how you
+          get answers that look right and aren't.
+        </p>
+        <p>The trip makes this concrete. Say you ask for a standout dinner spot for a birthday on your last night in
+          Kyoto. With no process, the agent pulls from whatever it already holds, which skews toward famous places and
+          old information. Give it the route instead: check recent Google Maps reviews, cross-reference what people are
+          recommending on Reddit this year, filter for places taking reservations on your date, then shortlist three
+          with a line on why each fits a birthday. The answer stops being a guess from memory and starts being the
+          result of a method you'd trust.
+        </p>
+        <p>That's the lever. When you know the steps that lead to a good answer, write them into the prompt rather than
+          hoping the agent picks the same path. Where Grounding hands over facts and Rules set the guardrails, Process
+          hands over the method.
+        </p>
+        <p>One thing worth saying on the slide: you don't always want to specify the process. If the agent's own
+          approach is likely better than yours, leaving the route open is the smarter call, the same way discovery can
+          beat direction. Process is a lever you reach for when the method matters to whether the answer is right, not a
+          step you bolt onto every prompt.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Why AI Fails Predictably? | Prompting with Intent</title>
+  <title>Why AI Fails Predictably | Prompting with Intent</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -13,7 +13,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="mobile-header">
-      <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
     <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
       <span class="menu-toggle__icon" aria-hidden="true"></span>
       <span>Menu</span>
@@ -25,7 +25,7 @@
       <div class="sidebar__inner">
         <a class="brand" href="../index.html">
           <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
-            <span>Prompting with Intent</span>
+          <span>Prompting with Intent</span>
         </a>
 
         <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
@@ -36,78 +36,50 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <p class="eyebrow">Topic guide</p>
-        <h1>Why AI Fails Predictably?</h1>
-        <p class="hero__lede">
+        <h1>Why AI Fails Predictably</h1>
+        <div style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          <p class="hero__lede">
             AI does not fail randomly. When you leave a gap in your prompt, it fills that gap
-            with the most statistically average answer from its training. The failures are
-            predictable once you see them as missing context, not missing intelligence.
-        </p>
-      </section>
-
-      <section class="content-section">
-        <h2>Some Examples</h2>
-        <p>
-          AI is smart at some tasks and limited at others. It can summarize, translate, classify, generate ideas, and
-          spot patterns across large amounts of information. It does not understand the world the same way people do,
-          and it can make confident mistakes when it lacks context or reliable evidence.
-        </p>
-        <button class="example-reveal__button" type="button" aria-expanded="false"
-          data-example-reveal-group="right-examples">
-          Show all corrections
-        </button>
-        <div class="examples-comparison" aria-label="Side-by-side AI answer examples">
-          <article class="example-pair">
-            <div class="example-card">
-                <h3>ChatGPT first try</h3>
-              <img src="../assets/chatgpt-wrong.png" alt="Incorrect ChatGPT answer example">
-            </div>
-            <div class="example-card example-result" data-example-group="right-examples" hidden>
-                <h3>ChatGPT after checking</h3>
-              <img src="../assets/chatgpt-right.png" alt="Corrected ChatGPT answer example">
-            </div>
-          </article>
-
-          <article class="example-pair">
-            <div class="example-card">
-                <h3>Claude first try</h3>
-              <img src="../assets/claude-wrong.png" alt="Incorrect Claude answer example">
-            </div>
-            <div class="example-card example-result" data-example-group="right-examples" hidden>
-                <h3>Claude after checking</h3>
-              <img src="../assets/claude-right.png" alt="Corrected Claude answer example">
-            </div>
-          </article>
-
-          <article class="example-pair">
-            <div class="example-card">
-                <h3>Gemini first try</h3>
-              <img src="../assets/gemini-wrong.png" alt="Incorrect Gemini answer example">
-            </div>
-            <div class="example-card example-result" data-example-group="right-examples" hidden>
-                <h3>Gemini after checking</h3>
-              <img src="../assets/gemini-right.png" alt="Corrected Gemini answer example">
-            </div>
-          </article>
+            with the most statistically average answer from its training. When you provide it with unnecessary
+            information, it will get distrcted. The skill is to find a balance.
+          </p>
         </div>
       </section>
 
-      <!--<section class="content-section">
-          <h2>What Makes AI Seem Smart</h2>
-          <ul>
-            <li>It can learn patterns from large examples and apply them to new prompts.</li>
-            <li>It can respond quickly in natural language, which makes the interaction feel human.</li>
-            <li>It can combine ideas from many domains, but it still needs clear goals and careful checking.</li>
-          </ul>
-        </section>
+      <section class="content-section">
+        <h3>Have you ever ordered a coffee?</h3>
+        <img src="../assets/why-ai-fails.png"
+          alt="A barista at a counter facing a customer ordering a vague 'coffee', illustrating how AI fills unspecified gaps with an average guess">
+        <p>Consider ordering coffee. Imagine a barista who has spent ten years mastering his craft, capable of making
+          over fifty different drinks, any one of them excellent. You walk up and say, "I want a coffee." What do you
+          get? Almost certainly the best-selling or highest-rated option—the safe average of everything people tend to
+          order. You might love it. You might not. The barista's skill was never the limiting factor; your request was.
+          But say instead, "I'd like an iced latte with oat milk and a double shot of espresso," and suddenly you are
+          nearly guaranteed to get a drink you enjoy. Nothing about the barista changed. You simply closed the gaps he
+          would otherwise have filled with the most popular guess.</p>
+        <img src="../assets/why-ai-fails-1.png"
+          alt="A barista at a counter facing a customer ordering a vague 'coffee', illustrating how AI fills unspecified gaps with an average guess">
+        <p>On the other hand, filling your prompt with information unnecessary for your task can overwhelm and distract
+          the agent. It will try to make use of that information, find a process that uses your favorite fruit and the
+          bed time story to brew your coffee.</p>
+      </section>
 
-        <section class="content-section">
-          <h2>A Useful Way to Think About It</h2>
-          <p>
-            Treat AI as a capable assistant, not an all-knowing expert. It is strongest when you give it a specific task, enough context, and a way to verify the result.
-          </p>
-        </section>-->
+      <section class="content-section">
+        <p>Same thing happens with AI. The fewer gaps you leave, the less it has to guess. And it doesn't guess
+          randomly. It defaults to whatever's most common, the "whole milk" of its training data.</p>
+        <p> The more extra information you add, the more the agent will try to make use of it, even if it's not relevant
+          to your task. and give you a result that is technically correct, but not what you asked for.</p>
+      </section>
+
+
     </main>
+
+    <!-- <aside class="rt-prompt" aria-label="Takeaway cheat sheet">
+      <p class="prompt_heading">Trip to Japan</p>
+      <ul class="prompt_lever_content">
+        <li class="prompt_lever_container">Plan a trip to Japan.</li>
+      </ul>
+    </aside> -->
   </div>
 
   <script src="../script.js"></script>

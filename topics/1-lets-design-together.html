@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Output Evaluation | Prompting with Intent</title>
+  <title>Let's go on a trip to Japan</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -36,27 +36,43 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <h1>Output Evaluation</h1>
+        <h1>Lets Design a Case Management Console Together</h1>
         <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
-          Getting a bad output isn't a failure. It's information. The question is what you do with it.
+          Let's take this from a vague ask to a real design, the way you'd brief a thoughtful junior designer. We'll add
+          one lever at a time and shape it into something complete.
         </p>
+
       </section>
 
-      <section class="content-section">
-        <h2>Four things worth building in</h2>
-        <p><strong>Ask it to critique its own answer.</strong><br/> 'Review what you just wrote. Does it actually answer what I asked? What's the weakest part?' Simple, and most people never do it.</p>
-        <p><strong>Ask it to list its assumptions.</strong><br/> Every output is built on things you didn't say. 'List the assumptions you made that I should verify.' That list is usually where the problems are.</p>
-        <p><strong>Ask it to flag uncertainty.</strong><br/> AI writes confident prose even when the reasoning is thin. 'Tell me where you're least confident and why' breaks that habit fast.</p>
-        <p><strong>Ask it to check against something specific.</strong><br/> 'Check this against WCAG 2.1 AA. Tell me what fails and what you're unsure about.' The more specific the standard, the more useful the answer.</p>
+      <section>
+        <button class="btn btn--secondary" type="button" data-reveal-target="trip-rt-prompt">Lets start the
+          prompt</button>
       </section>
+
 
     </main>
-    <aside class="rt-prompt">
+    <aside class="rt-prompt" id="trip-rt-prompt" hidden>
       <p class="prompt_heading">Case Management Console</p>
       <div class="prompt_lever_content">
         <div class="prompt_lever_container special">
-          <p class="prompt_lever_label">Output Evaluation</p>
-          <p class="prompt_lever_text">Before I review this, check it yourself. Does it answer the original question? What assumptions did you make that I should verify? Where are you least confident? Flag anything that could be wrong for a &lt;context&gt;.</p>
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud
+            patterns</p>
+        </div>
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Design a case management console for the support team.</p>
+        </div>
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift, with high volume, lots of
+            context-switching between cases.</p>
+        </div>
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each
+            region</p>
         </div>
       </div>
     </aside>

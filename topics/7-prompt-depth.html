@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prompt Depth | Prompting with Intent</title>
+  <title>Prompt Effort | Prompting with Intent</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -36,15 +36,59 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <p class="eyebrow">Topic guide</p>
-        <h1>Prompt Depth</h1>
-        <p class="hero__lede">
-          Prompt depth is about telling the AI how much thinking, detail, and verification the task actually needs.
+        <h1>Prompt Effort</h1>
+        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          Prompt Effort is about telling the AI how much thinking, detail, and verification the task actually needs. It's also called reasoning effort or thinking level.
         </p>
       </section>
 
       <section class="content-section">
-        <h2>Why Depth Matters</h2>
+        <h3>How to choose prompt effort</h3>
+        <div class="spec-slider" data-spec-slider>
+          <div class="spec-slider__ends">
+            <span>Auto</span>
+            <span>Quick</span>
+            <span>Standard</span>
+            <span>Deep</span>
+          </div>
+          <div class="spec-slider__track">
+            <input class="spec-slider__range" type="range" min="1" max="4" step="1" value="3"
+              aria-label="Prompt specificity" data-spec-range>
+            <div class="spec-slider__stops" aria-hidden="true">
+              <span class="spec-slider__stop-1 is-active" data-spec-stop="1"></span>
+              <span class="spec-slider__stop-1" data-spec-stop="2"></span>
+              <span class="spec-slider__stop-1" data-spec-stop="3"></span>
+            </div>
+          </div>
+          <div class="spec-slider__columns">
+            <div class="spec-slider__text is-selected" data-spec-text="1">
+              <p>&lt;No additional constraint&gt;</p>
+              <hr>
+              <p>You don't say how much effort to put in, so the AI picks the depth on its own based on what the task looks like it needs.</p>
+            </div>
+            <div class="spec-slider__text" data-spec-text="2">
+              <p>Give me a rough wireframe-level layout, no reasoning.</p>
+              <hr>
+              <p>A fast pass. You want the regions blocked out and little else.</p>
+            </div>
+            <div class="spec-slider__text" data-spec-text="3">
+              <p>Give me the layout plus why each region is placed where it is, enough to brief a developer.</p>
+              <hr>
+              <p>A useful answer you can act on, with enough reasoning to hand off.</p>
+              <button class="btn btn--secondary" type="button" data-reveal-target="effort-lever-1">Add to
+                Prompt</button>
+            </div>
+            <div class="spec-slider__text" data-spec-text="4">
+              <p>Give me the layout, the rationale, accessibility considerations for agents using screen readers, two options for the side panel with tradeoffs, and a note on where the design might strain at high case volume.</p>
+              <hr>
+              <p>Maximum thinking and output, for when the design has to land.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="content-sectionr">
+         
         <p>
           Not every prompt needs a long answer. Simple tasks need speed and clarity. Complex tasks need reasoning,
           tradeoffs, edge cases, and checks. If you do not set the depth, the AI guesses how much work to do.
@@ -73,8 +117,45 @@
           tradeoffs before recommending one," or "Think through edge cases and tell me what could go wrong." This helps
           the AI match the answer to the job instead of over-explaining simple things or under-thinking hard ones.
         </p>
-      </section>
+      </section> -->
     </main>
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Case Management Console</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud patterns</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Design a case management console for the support team.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift, with high volume, lots of context-switching between cases.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each region</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Directions</p>
+          <p class="prompt_lever_text">Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
+            case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+            articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
+            fold at 1280px.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Process</p>
+          <p class="prompt_lever_text">First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.</p>
+        </div>
+        <div class="prompt_lever_container special" id="effort-lever-1" hidden>
+          <p class="prompt_lever_label">Effort</p>
+          <p class="prompt_lever_text">The layout plus why each region is placed where it is — enough to brief a developer.</p>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <script src="../script.js"></script>

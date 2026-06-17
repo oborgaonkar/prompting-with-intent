@@ -5,47 +5,41 @@
       href: "index.html"
     },
     {
-      label: "Thesis",
-      href: "topics/1-thesis.html"
+      label: "Why AI Fails Predictably",
+      href: "topics/2-why-ai-fails.html"
     },
     {
-      heading: "Topics",
+      label: "Prompt Structures are a Menu",
+      href: "topics/3-general-prompt-structure.html"
+    },
+    {
+      label: "Lets Design Together",
+      href: "topics/1-lets-design-together.html"
+    },
+    {
+      heading: "Levers",
       links: [
-        {
-          label: "Why AI Fails Predictably?",
-          href: "topics/2-why-ai-fails.html"
-        },
-        {
-          label: "General Prompt Structure",
-          href: "topics/3-general-prompt-structure.html"
-        },
+
+
         {
           label: "Directed vs. Discovered",
           href: "topics/6-directed-vs-discovered.html"
         },
         {
-          label: "Prompt Depth",
-          href: "topics/7-prompt-depth.html"
+          label: "Process",
+          href: "topics/12-process.html"
         },
         {
-          label: "Rules and Skills",
-          href: "topics/4-rules-and-skills.html"
+          label: "Prompt Effort",
+          href: "topics/7-prompt-depth.html"
         },
         {
           label: "Grounding",
           href: "topics/5-grounding.html"
         },
         {
-          label: "Revised Prompt Structure",
-          href: "topics/8-revised-prompt-structure.html"
-        },
-        {
-          label: "Output Evaluation",
-          href: "topics/9-output-evaluation.html"
-        },
-        {
-          label: "Iteration & Recovery",
-          href: "topics/10-iteration-and-recovery.html"
+          label: "Rules and Skills",
+          href: "topics/4-rules-and-skills.html"
         }
       ]
     },
@@ -53,15 +47,28 @@
       heading: "Closing",
       links: [
         {
-          label: "Closing / Cheat Sheet",
-          href: "topics/11-cheat-sheet.html"
+          label: "Output Evaluation",
+          href: "topics/9-output-evaluation.html"
+        },
+        {
+          label: "Iteration Or Recovery",
+          href: "topics/10-iteration-and-recovery.html"
+        },
+        {
+          label: "Closing",
+          href: "topics/11-closing.html"
+        },
+        {
+          label: "Cheat Sheet",
+          href: "topics/13-cheat-sheet.html"
         }
       ]
     }
   ];
 
   function getPathPrefix() {
-    return window.location.pathname.indexOf("/topics/") !== -1 ? "../" : "";
+    var path = window.location.pathname;
+    return path.indexOf("/topics/") !== -1 ? "../" : "";
   }
 
   function getCurrentPage() {
@@ -123,7 +130,31 @@
     });
   }
 
+  function renderSidebarFooter() {
+    var inner = document.querySelector(".sidebar__inner");
+
+    if (!inner) {
+      return;
+    }
+
+    var footer = document.createElement("div");
+    footer.className = "sidebar__footer";
+
+    var madeBy = document.createElement("p");
+    madeBy.className = "sidebar__footer-line";
+    madeBy.textContent = "Made by Onkar Borgaonkar";
+
+    var updated = document.createElement("p");
+    updated.className = "sidebar__footer-line";
+    updated.textContent = "Last updated: June 17, 2026";
+
+    footer.appendChild(madeBy);
+    footer.appendChild(updated);
+    inner.appendChild(footer);
+  }
+
   renderSiteNavigation();
+  renderSidebarFooter();
 
   var menuButton = document.querySelector(".menu-toggle");
   var closeTargets = document.querySelectorAll("[data-close-menu], .site-nav__link");
@@ -219,9 +250,93 @@
     });
   });
 
+  document.querySelectorAll("[data-spec-slider]").forEach(function (slider) {
+    var range = slider.querySelector("[data-spec-range]");
+
+    if (!range) {
+      return;
+    }
+
+    var texts = slider.querySelectorAll("[data-spec-text]");
+    var stops = slider.querySelectorAll("[data-spec-stop]");
+
+    function update() {
+      texts.forEach(function (text) {
+        text.classList.toggle("is-selected", text.dataset.specText === range.value);
+      });
+
+      stops.forEach(function (stop) {
+        stop.classList.toggle("is-active", stop.dataset.specStop === range.value);
+      });
+    }
+
+    range.addEventListener("input", update);
+    update();
+  });
+
+  document.querySelectorAll("[data-reveal-target]").forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      var target = document.getElementById(trigger.dataset.revealTarget);
+
+      if (target) {
+        target.hidden = false;
+      }
+    });
+  });
+
   document.addEventListener("keydown", function (event) {
     if (menuButton && event.key === "Escape") {
       setMenuOpen(false);
     }
   });
+
+  function setupJokeReveal() {
+    var button = document.querySelector("[data-joke-reveal]");
+    var figures = document.querySelectorAll("[data-joke-stage]");
+
+    if (!button || figures.length === 0) {
+      return;
+    }
+
+    var labels = ["Reveal the others", "Now watch them self-correct", ""];
+    var stage = 0;
+    var maxStage = 2;
+
+    function applyStage() {
+      figures.forEach(function (figure) {
+        var figureStage = Number(figure.getAttribute("data-joke-stage"));
+        var shouldShow = figureStage <= stage;
+        var wasHidden = figure.hidden;
+
+        figure.hidden = !shouldShow;
+
+        if (shouldShow && wasHidden) {
+          figure.classList.add("is-entering");
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              figure.classList.remove("is-entering");
+            });
+          });
+        }
+      });
+
+      if (stage >= maxStage) {
+        button.hidden = true;
+      } else {
+        button.textContent = labels[stage];
+      }
+    }
+
+    button.textContent = labels[0];
+    applyStage();
+
+    button.addEventListener("click", function () {
+      if (stage < maxStage) {
+        stage += 1;
+        applyStage();
+      }
+    });
+  }
+
+  setupJokeReveal();
 })();

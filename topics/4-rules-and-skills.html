@@ -36,11 +36,13 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <p class="eyebrow">Topic guide</p>
         <h1>Rules and Skills</h1>
-        <p class="hero__lede">
-          Rules and Skills are repeatable instructions that can be used to improve the quality of the output.
-        </p>
+        <div class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          <p>Rules and Skills are repeatable instructions that can be used to improve the quality of the output.</p>
+          <p>Rules are the guardrails that hold throughout your chat</p>
+          <p>Skills are expertise in a field that the AI can bring to the table</p>
+        </div>
+        
       </section>
 
       <section class="content-section">
@@ -83,7 +85,7 @@
             work."</li>
         </ul>
         </p>
-        <p>Can be thought of as a "expertise" for the AI.</p>
+        <p>Can be thought of as an "expertise" for the AI.</p>
         <p>Skills activate a mode of thinking. </p>
         <p>In Claude.ai, skills live in your Project instructions alongside your rules. In Cursor, they go in your
           .cursor/rules/*.mdc (latest) or .cursorrules (older versions) file as a named block. In a Slackbot, they live in the system prompt configured when the bot is
@@ -91,6 +93,58 @@
           into every interaction.</p>
       </section>
     </main>
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Case Management Console</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud patterns</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Design a case management console for the support team.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift, with high volume, lots of context-switching between cases.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each region</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Directions</p>
+          <p class="prompt_lever_text">Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
+            case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+            articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
+            fold at 1280px.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Process</p>
+          <p class="prompt_lever_text">First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Effort</p>
+          <p class="prompt_lever_text">The layout plus why each region is placed where it is — enough to brief a developer.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Grounding Details</p>
+          <p class="prompt_lever_text">Your actual case object fields, the SLA definitions your org uses, a screenshot of the current console, the SLDS version you're on.</p>
+        </div>
+        <div class="prompt_lever_container special" >
+          <p class="prompt_lever_label">Rule</p>
+          <p class="prompt_lever_text">Always use SLDS components over custom components</p>
+          <p class="prompt_lever_text">Never put a primary action below the fold</p>
+          <p class="prompt_lever_text">Every interactive element meets WCAG 2.1 AA</p>
+        </div>
+        <div class="prompt_lever_container special" >
+          <p class="prompt_lever_label">Skill</p>
+          <p class="prompt_lever_text">Use an /accessibility_audit skill that checks contrast and focus order</p>
+          <p class="prompt_lever_text">Use a /design_system_compliance skill that flags any component not in SLDS</p>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <script src="../script.js"></script>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat Sheet | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <h1>Process</h1>
+        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          Process is the actual steps you want the agent to follow to get there. When you know the method that produces
+          a good answer, handing it over is often the difference between a right answer and a confident wrong one.
+        </p>
+      </section>
+      <section>
+        <button class="btn btn--secondary" type="button" data-reveal-target="process-level">Add process</button>
+      </section>
+      <section class="content-section">
+        <h2>Why it matters</h2>
+        <p>Most prompts describe a destination and leave the route entirely to the agent. Sometimes that's fine. But for
+          tasks where the way you reach the answer determines whether it's correct, leaving the route open is how you
+          get answers that look right and aren't.
+        </p>
+        <p>The console makes this concrete. Say you ask the agent to design a case management console. With no process,
+          it jumps straight to a layout, arranging components by convention rather than by how agents actually work.
+          Give it the route instead: first map the agent's task flow from case assignment to resolution, identify the
+          moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then
+          pick components. The design stops being a guess at a layout and starts being the result of a method you'd
+          trust.
+        </p>
+        <p>That's the lever. When you know the steps that lead to a good answer, write them into the prompt rather than
+          hoping the agent picks the same path. Where Grounding hands over facts and Rules set the guardrails, Process
+          hands over the method.
+        </p>
+        <p>One thing to note: you don't always want to specify the process. If the agent's own
+          approach is likely better than yours, leaving the route open is the smarter call, the same way discovery can
+          beat direction. Process is a lever you reach for when the method matters to whether the answer is right, not a
+          step you bolt onto every prompt.
+        </p>
+      </section>
+
+    </main>
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Case Management Console</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud patterns</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Design a case management console for the support team.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift, with high volume, lots of context-switching between cases.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each region</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Directions</p>
+          <p class="prompt_lever_text">Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
+            case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+            articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
+            fold at 1280px.</p>
+        </div>
+        <div class="prompt_lever_container special" id="process-level" hidden>
+          <p class="prompt_lever_label">Process</p>
+          <p class="prompt_lever_text">First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

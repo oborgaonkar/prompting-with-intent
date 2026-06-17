@@ -34,48 +34,65 @@
 
     <div class="sidebar-backdrop" data-close-menu></div>
 
-    <main class="content" id="main-content">
+    <main class="content title-slide" id="main-content">
       <section class="hero">
-        <p class="eyebrow">Welcome</p>
-        <h1>Prompting with Intent</h1>
+        <h1>Prompt Engineering: Designing Better AI Outcomes Through Structured Communication</h1>
         <p class="hero__lede">
-          You already use AI. Probably every day. This isn't about learning the basics. You're past that. It's about
-          getting sharper at something you're already doing.
+          Give the AI half a prompt and it will confidently hand you half an answer.
+          The trick isn't a better model. It's a better prompt.
         </p>
-        <p class="hero__lede">
-          This covers how prompts actually work, where they fail, and the levers you haven't had a name for yet.
-          Practical. Specific. For designers who already live in these tools.
-        </p>
+      </section>
 
-        <dl class="home-meta" aria-label="Site details">
-          <div>
-            <dt>Author</dt>
-            <dd>Onkar Borgaonkar</dd>
+      <section class="content-section">
+        <div class="joke">
+          <p class="joke__row-label">First try</p>
+          <div class="joke__grid">
+            <figure data-joke-stage="0">
+              <figcaption>ChatGPT</figcaption>
+              <img src="assets/chatgpt-wrong.png" alt="ChatGPT's first answer"
+                onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+            </figure>
+            <figure data-joke-stage="1" hidden>
+              <figcaption>Claude</figcaption>
+              <img src="assets/claude-wrong.png" alt="Claude's first answer"
+                onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+            </figure>
+            <figure data-joke-stage="1" hidden>
+              <figcaption>Gemini</figcaption>
+              <img src="assets/gemini-wrong.png" alt="Gemini's first answer"
+                onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+            </figure>
           </div>
-          <div>
-            <dt>Date</dt>
-            <dd>June 17, 2026</dd>
+
+          <p class="joke__row-label" data-joke-stage="2" hidden>Second try</p>
+          <div class="joke__grid">
+            <figure data-joke-stage="2" hidden>
+              <figcaption>ChatGPT</figcaption>
+              <img src="assets/chatgpt-right.png" alt="ChatGPT's corrected answer"
+                onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+            </figure>
+            <figure data-joke-stage="2" hidden>
+              <figcaption>Claude</figcaption>
+              <img src="assets/claude-right.png" alt="Claude's corrected answer"
+                onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+            </figure>
+            <figure data-joke-stage="2" hidden>
+              <figcaption>Gemini</figcaption>
+              <img src="assets/gemini-right.png" alt="Gemini's corrected answer"
+                onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+            </figure>
           </div>
-        </dl>
+
+          <button class="btn btn--primary" type="button" data-joke-reveal>Reveal the others</button>
+        </div>
       </section>
       <section class="content-section">
-        <h2>Agenda</h2>
+        <h2>What you will gain from this session</h2>
         <ul>
-          <li>Why prompts fail predictably
-          <li>How prompt structure actually works</li>
-          <li>The new levers used to control the gaps</li>
-          <li>How to calibrate specificity on purpose</li>
-          <li>What to do when the output misses</li>
+          <li>Why AI gives you average answers, and what you're leaving out</li>
+          <li>A practical toolkit for writing sharper prompts</li>
+          <li>A way to recover when the output misses, without starting from scratch</li>
         </ul>
-      </section>
-
-      <section class="content-section">
-        <h2>Who this is for</h2>
-        <p>
-          People who already use AI every day and want to move past "write a clear prompt."
-          If you have felt the difference between an answer that nails it and one that drifts,
-          this is about understanding why, and getting that result on purpose.
-        </p>
       </section>
     </main>
   </div>

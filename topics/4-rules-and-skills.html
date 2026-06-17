@@ -37,7 +37,7 @@
     <main class="content" id="main-content">
       <section class="hero">
         <h1>Rules and Skills</h1>
-        <p class="hero__lede">
+        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
           Rules and Skills are repeatable instructions that can be used to improve the quality of the output.
         </p>
         <div class="callout">
@@ -95,51 +95,54 @@
       </section>
     </main>
     <aside class="rt-prompt">
-      <p class="prompt_heading">Trip to Japan</p>
+      <p class="prompt_heading">Case Management Console</p>
       <div class="prompt_lever_content">
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Role</p>
-          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud patterns</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Task</p>
-          <p class="prompt_lever_text">Plan a trip to Japan.</p>
+          <p class="prompt_lever_text">Design a case management console for the support team.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Context</p>
-          <p class="prompt_lever_text">&lt;Who's going.&gt;</p>
-          <p class="prompt_lever_text">&lt;When.&gt;</p>
+          <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift — high volume, lots of context-switching between cases.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Output Format</p>
-          <p class="prompt_lever_text">A day-by-day itinerary</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each region</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Directions</p>
-          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko
-            trip, no museums, hotels near a JR line.</p>
-          <p class="prompt_lever_text">One evening is my partner's birthday, make it special.</p>
+          <p class="prompt_lever_text">Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
+            case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+            articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
+            fold at 1280px.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Process</p>
-          <p class="prompt_lever_text">Look for recommendations on Reddit, check recent Google Maps reviews, cross-reference what people are recommending on Reddit this year, then shortlist three with a line on why each fits a birthday.</p>
+          <p class="prompt_lever_text">First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Effort</p>
-          <p class="prompt_lever_text">Think through the logistics, account for travel time between cities</p>
+          <p class="prompt_lever_text">The layout plus why each region is placed where it is — enough to brief a developer.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Grounding Details</p>
-          <p class="prompt_lever_text">Your actual travel dates, your real budget number, your visa situation, a note that you've already booked the Tokyo hotel</p>
+          <p class="prompt_lever_text">Your actual case object fields, the SLA definitions your org uses, a screenshot of the current console, the SLDS version you're on.</p>
         </div>
         <div class="prompt_lever_container special" >
           <p class="prompt_lever_label">Rule</p>
-          <p class="prompt_lever_text">Ensure evening travel accomodates for dinner and time to explore local shops</p>
-          <p class="prompt_lever_text">Ensure recommended restaurants have gluten-free options</p>
+          <p class="prompt_lever_text">Always use SLDS components over custom components</p>
+          <p class="prompt_lever_text">Never put a primary action below the fold</p>
+          <p class="prompt_lever_text">Every interactive element meets WCAG 2.1 AA</p>
         </div>
         <div class="prompt_lever_container special" >
           <p class="prompt_lever_label">Skill</p>
-          <p class="prompt_lever_text">Use /budget_tracker to stay within budget</p>
+          <p class="prompt_lever_text">Use an /accessibility_audit skill that checks contrast and focus order</p>
+          <p class="prompt_lever_text">Use a /design_system_compliance" skill that flags any component not in SLDS</p>
         </div>
       </div>
     </aside>

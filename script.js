@@ -9,17 +9,17 @@
       href: "topics/2-why-ai-fails.html"
     },
     {
-      label: "It's a Menu",
+      label: "Prompt Structures are a Menu",
       href: "topics/3-general-prompt-structure.html"
     },
     {
-      label: "Lets Go On A Trip",
-      href: "topics/1-lets-go-on-a-trip.html"
+      label: "Lets Design Together",
+      href: "topics/1-lets-design-together.html"
     },
     {
       heading: "Levers",
       links: [
-        
+
 
         {
           label: "Directed vs. Discovered",

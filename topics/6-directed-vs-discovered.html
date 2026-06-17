@@ -37,7 +37,7 @@
     <main class="content" id="main-content">
       <section class="hero">
         <h1>Directed vs. Discovered</h1>
-        <p class="hero__lede">
+        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
           Are you executing a vision, or leaving room for the AI to surprise you? Know which one before you start.
         </p>
       </section>
@@ -62,49 +62,56 @@
           </div>
           <div class="spec-slider__columns">
             <div class="spec-slider__text is-selected" data-spec-text="1">
-              <p>&lt;No additional constraint&gt;</p>
+              <p>Design whatever console you think works best.</p>
               <hr>
               <ul class="no-bullets">
-                <li>🤖❓ Energy</li>
-                <li>🤖❓ City</li>
-                <li>🤖❓ Budget</li>
-                <li>🤖❓ Interests</li>
+                <li>🤖❓ Layout</li>
+                <li>🤖❓ Components</li>
+                <li>🤖❓ Triage sort</li>
+                <li>🤖❓ Knowledge panel</li>
               </ul>
               <hr>
-              <p>Might surface a town you'd never have found</p>
+              <p>The AI picks the layout, the components, everything.</p>
             </div>
             <div class="spec-slider__text" data-spec-text="2">
-              <p>Keep it relaxed, not a packed schedule.</p>
+              <p>Build it around fast triage, agents need to see what's urgent without clicking in.</p>
               <hr>
               <ul class="no-bullets">
-                <li>🧑‍🦲 Energy</li>
-                <li>🤖 City</li>
-                <li>🤖 Budget</li>
-                <li>🤖 Interests</li>
+                <li>🧑‍🦲 Layout</li>
+                <li>🤖 Components</li>
+                <li>🤖 Triage sort</li>
+                <li>🤖 Knowledge panel</li>
               </ul>
+              <hr>
+              <p>You've set a principle, left the execution open.</p>
             </div>
             <div class="spec-slider__text" data-spec-text="3">
-              <p>Tokyo and Kyoto, food-focused, budget mid-range.</p>
+              <p>Three-column layout: case list, case detail, and a side panel for knowledge articles. Use standard
+                SLDS components.</p>
               <hr>
               <ul class="no-bullets">
-                <li>🧑‍🦲 Energy</li>
-                <li>🧑‍🦲 City</li>
-                <li>🤖 Budget</li>
-                <li>🤖 Interests</li>
+                <li>🧑‍🦲 Layout</li>
+                <li>🧑‍🦲 Components</li>
+                <li>🤖 Triage sort</li>
+                <li>🤖 Knowledge panel</li>
               </ul>
+              <hr>
+              <p>Structure fixed, the AI fills the detail.</p>
             </div>
             <div class="spec-slider__text" data-spec-text="4">
-              <p>Three days Tokyo, four in Kyoto, max $200 a night, day for open for a Nikko trip, no museums, hotels
-                near a JR line.</p>
+              <p>Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
+                case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+                articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
+                fold at 1280px.</p>
               <hr>
               <ul class="no-bullets">
-                <li>🧑‍🦲 Energy</li>
-                <li>🧑‍🦲 City</li>
-                <li>🧑‍🦲 Budget</li>
-                <li>🧑‍🦲 Interests</li>
+                <li>🧑‍🦲 Layout</li>
+                <li>🧑‍🦲 Components</li>
+                <li>🧑‍🦲 Triage sort</li>
+                <li>🧑‍🦲 Knowledge panel</li>
               </ul>
               <hr>
-              <p>Exactly what you pictured and nothing you didn't.</p>
+              <p>The AI fills only the smallest gaps.</p>
               <button class="btn btn--secondary" type="button" data-reveal-target="directions-lever">Add to
                 Prompt</button>
             </div>
@@ -112,106 +119,33 @@
         </div>
       </section>
 
-      <section class="content-section">
-        <p>Plan a birthday dinner for my partner</p>
-        <div class="spec-slider" data-spec-slider>
-          <div class="spec-slider__ends">
-            <span>Discovered</span>
-            <span>Directed</span>
-          </div>
-          <div class="spec-slider__track">
-            <input class="spec-slider__range" type="range" min="1" max="4" step="1" value="2"
-              aria-label="Prompt specificity" data-spec-range>
-            <div class="spec-slider__stops" aria-hidden="true">
-              <span class="spec-slider__stop" data-spec-stop="1"></span>
-              <span class="spec-slider__stop is-active" data-spec-stop="2"></span>
-              <span class="spec-slider__stop" data-spec-stop="3"></span>
-              <span class="spec-slider__stop" data-spec-stop="4"></span>
-            </div>
-          </div>
-          <div class="spec-slider__columns">
-            <div class="spec-slider__text is-selected" data-spec-text="1">
-              <p>&lt;Don't mention the birthday or partner's name&gt;</p>
-              <hr>
-              <ul class="no-bullets">
-                <li>🤖❓ City</li>
-                <li>🤖❓ Budget</li>
-                <li>🤖❓ Event</li>
-              </ul>
-              <hr>
-              <p>The birthday goes unmentioned, so the AI doesn't know there's anything special about that evening and
-                plans it like any other night.</p>
-            </div>
-            <div class="spec-slider__text" data-spec-text="2">
-              <p>One evening is my partner's birthday, make it special.</p>
-              <hr>
-              <ul class="no-bullets">
-                <li>🧑‍🦲 City</li>
-                <li>🤖 Budget</li>
-                <li>🤖 Event</li>
-              </ul>
-              <hr>
-              <p>You've flagged the occasion but left the date, the place, and what "special" means entirely to the AI.
-              </p>
-              <button class="btn btn--secondary" type="button" data-reveal-target="directions-lever-1">Add to
-                Prompt</button>
-            </div>
-            <div class="spec-slider__text" data-spec-text="3">
-              <p>Night three in Kyoto is my partner's birthday, plan a memorable dinner out.</p>
-              <hr>
-              <ul class="no-bullets">
-                <li>🧑‍🦲 City</li>
-                <li>🤖 Budget</li>
-                <li>🧑‍🦲 Event</li>
-              </ul>
-              <hr>
-              <p>The evening, the city, and the type of plan are fixed. The AI still picks the restaurant and the
-                details.</p>
-            </div>
-            <div class="spec-slider__text" data-spec-text="4">
-              <p>Night three in Kyoto is my partner's birthday: book a kaiseki dinner with a counter seat, somewhere
-                quiet enough to talk, under $150 a head, walkable from a JR line, and end the night somewhere with a
-                view.</p>
-              <hr>
-              <ul class="no-bullets">
-                <li>🧑‍🦲 City</li>
-                <li>🧑‍🦲 Budget</li>
-                <li>🧑‍🦲 Event</li>
-              </ul>
-              <hr>
-              <p>The occasion, the meal, the budget, the setting, and the close are all specified. The AI fills only the
-                smallest gaps.</p>
-
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <aside class="rt-prompt">
-      <p class="prompt_heading">Trip to Japan</p>
+      <p class="prompt_heading">Case Management Console</p>
       <div class="prompt_lever_content">
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Role</p>
-          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud patterns</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Task</p>
-          <p class="prompt_lever_text">Plan a trip to Japan.</p>
+          <p class="prompt_lever_text">Design a case management console for the support team.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Context</p>
-          <p class="prompt_lever_text">&lt;Who's going.&gt;</p>
-          <p class="prompt_lever_text">&lt;When.&gt;</p>
+          <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift — high volume, lots of context-switching between cases.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Output Format</p>
-          <p class="prompt_lever_text">A day-by-day itinerary</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each region</p>
         </div>
         <div class="prompt_lever_container special" id="directions-lever" hidden>
           <p class="prompt_lever_label">Directions</p>
-          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko
-            trip, no museums, hotels near a JR line.</p>
-            <p class="prompt_lever_text" id="directions-lever-1" hidden>One evening is my partner's birthday, make it special.</p>
+          <p class="prompt_lever_text">Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
+            case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+            articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
+            fold at 1280px.</p>
         </div>
       </div>
     </aside>

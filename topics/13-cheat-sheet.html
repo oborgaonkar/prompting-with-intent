@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat Sheet | Prompting with Intent</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="../index.html">
+          <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content" id="main-content">
+      <section class="hero">
+        <h1>The Prompt Cheat Sheet</h1>
+        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          The gap is yours to close. This is how.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Before you type, answer three things</h2>
+        <ul>
+          <li>What already exists</li>
+          <li>What you're trying to achieve</li>
+          <li>What you've tried or ruled out</li>
+        </ul>
+        <p>Can't answer all three? You're not ready yet.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Build the prompt</h2>
+        <ul>
+          <li><strong>Always:</strong> Task. What you want done.</li>
+          <li><strong>Usually:</strong> Context, grounding, rules, skills, process.</li>
+          <li><strong>When useful:</strong> Role, constraints, examples, format.</li>
+        </ul>
+        <p>Don't fill every lever. Order off the menu the task needs. Too little and it guesses, too much and it gets distracted.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Set the two dials</h2>
+        <ul>
+          <li><strong>Specificity:</strong> how much you direct vs. leave open.</li>
+          <li><strong>Depth:</strong> how much thinking you ask for.</li>
+        </ul>
+        <p>Don't set them and the AI sets them for you. It guesses average.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When the output misses</h2>
+        <ul>
+          <li><strong>Task unclear</strong> &rarr; restate with more specificity</li>
+          <li><strong>Context missing</strong> &rarr; add the grounding you left out</li>
+          <li><strong>Depth wrong</strong> &rarr; say so directly</li>
+          <li><strong>Format wrong</strong> &rarr; show an example</li>
+        </ul>
+        <p>Refine when it still understands you. Restart when it's locked onto the wrong idea.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Make it check itself</h2>
+        <p>Paste into any high-stakes prompt:</p>
+        <p class="prompt-example">Before I review this, check it yourself. Does it answer the original question? What assumptions did you make that I should verify? Where are you least confident?</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

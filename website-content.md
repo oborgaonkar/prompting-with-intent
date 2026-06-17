@@ -24,11 +24,17 @@ Give the AI half a prompt and it will confidently hand you half an answer. The t
 
 Button: "Reveal the others"
 
+### What you will gain from this session
+
+- Why AI gives you average answers, and what you're leaving out
+- A practical toolkit for writing sharper prompts
+- A way to recover when the output misses, without starting from scratch
+
 ---
 
 ## 2. Why AI Fails Predictably
 
-AI does not fail randomly. When you leave a gap in your prompt, it fills that gap with the most statistically average answer from its training. The failures are predictable once you see them as missing context, not missing intelligence.
+AI does not fail randomly. When you leave a gap in your prompt, it fills that gap with the most statistically average answer from its training. When you provide it with unnecessary information, it will get distrcted. The skill is to find a balance.
 
 ### Have you ever ordered a coffee?
 
@@ -36,7 +42,13 @@ AI does not fail randomly. When you leave a gap in your prompt, it fills that ga
 
 Consider ordering coffee. Imagine a barista who has spent ten years mastering his craft, capable of making over fifty different drinks, any one of them excellent. You walk up and say, "I want a coffee." What do you get? Almost certainly the best-selling or highest-rated option—the safe average of everything people tend to order. You might love it. You might not. The barista's skill was never the limiting factor; your request was. But say instead, "I'd like an iced latte with oat milk and a double shot of espresso," and suddenly you are nearly guaranteed to get a drink you enjoy. Nothing about the barista changed. You simply closed the gaps he would otherwise have filled with the most popular guess.
 
+[why-ai-fails-1.png]
+
+On the other hand, filling your prompt with information unnecessary for your task can overwhelm and distract the agent. It will try to make use of that information, find a process that uses your favorite fruit and the bed time story to brew your coffee.
+
 Same thing happens with AI. The fewer gaps you leave, the less it has to guess. And it doesn't guess randomly. It defaults to whatever's most common, the "whole milk" of its training data.
+
+The more extra information you add, the more the agent will try to make use of it, even if it's not relevant to your task. and give you a result that is technically correct, but not what you asked for.
 
 ---
 
@@ -90,7 +102,7 @@ Button: "Lets start the prompt"
 
 Are you executing a vision, or leaving room for the AI to surprise you? Know which one before you start.
 
-### Choose how much creative freedon you want to give the AI
+### Choose how much creative freedom you want to give the AI
 
 What do you have in mind?
 
@@ -159,9 +171,7 @@ One thing to note: you don't always want to specify the process. If the agent's 
 
 ---
 
-## 7. Prompt Depth
-
-**Title:** Prompt Effort
+## 7. Prompt Effort
 
 Prompt Effort is about telling the AI how much thinking, detail, and verification the task actually needs. It's also called reasoning effort or thinking level.
 
@@ -325,7 +335,7 @@ In Claude.ai, rules live in your Project instructions. In Cursor, they live in y
 - "You are a design director. When I share work, evaluate it across: user clarity, business alignment, technical feasibility, and consistency with existing patterns. Give me the hard feedback, not the kind version."
 - "When I describe a product problem, help me think upstream. Push back if I'm jumping to solutions. Ask about the job to be done, what success looks like in 6 months, and what we'd need to believe for this to work."
 
-Can be thought of as a "expertise" for the AI.
+Can be thought of as an "expertise" for the AI.
 
 Skills activate a mode of thinking.
 
@@ -381,7 +391,27 @@ A clean start with a better prompt beats ten rounds of correction.
 
 ---
 
-## 12. Closing / Cheat Sheet
+## 12. Closing
+
+**Title:** Cheat Sheet
+
+The parts worth keeping. Use this when you're about to prompt something important.
+
+### If you get your first prompt right
+
+- [closing-1.png] — A diagram of a prompt and the output it produces
+- [closing-2.png] — A diagram of a prompt and the output it produces
+
+### Lessons to carry away
+
+- **You don't fill every lever. You choose.** A throwaway question takes one line. A real design takes several. The judgment is knowing which.
+- **Specificity and depth are dials, not switches.** If you don't set them, the AI sets them for you, and it guesses average.
+- **A clean restart beats ten corrections.** When it's locked onto the wrong idea, start over with a better prompt instead of arguing it back.
+- **Good prompting is just clear thinking, written down.** If you can't say what you want, the AI can't either.
+
+---
+
+## 13. Cheat Sheet
 
 **Title:** Cheat Sheet
 

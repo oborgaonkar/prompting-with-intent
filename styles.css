@@ -618,6 +618,20 @@ p {
   height: auto;
 }
 
+.image-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: start;
+  margin-top: var(--space-3);
+}
+
+.image-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .prompt-structures-grid {
   column-count: 3;
   column-gap: var(--space-4);
@@ -686,7 +700,7 @@ p {
 
 .spec-slider__ends {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .spec-slider__track {
@@ -1034,6 +1048,10 @@ body.menu-open {
   }
 
   .example-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .image-pair {
     grid-template-columns: 1fr;
   }
 

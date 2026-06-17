@@ -55,8 +55,12 @@
           href: "topics/10-iteration-and-recovery.html"
         },
         {
-          label: "Closing / Cheat Sheet",
-          href: "topics/11-cheat-sheet.html"
+          label: "Closing",
+          href: "topics/11-closing.html"
+        },
+        {
+          label: "Cheat Sheet",
+          href: "topics/13-cheat-sheet.html"
         }
       ]
     }

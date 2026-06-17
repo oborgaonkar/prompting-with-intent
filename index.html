@@ -6,34 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | Prompting with Intent</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="slides/slides.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body data-slide="main">
-  <div class="deck">
-    <!-- Column 1: navigation between slides -->
-    <aside class="deck__col deck__col--nav">
-      <a class="deck-brand" href="index.html">
-        <img class="deck-brand__mark" src="assets/favicon.svg" alt="" aria-hidden="true">
-        <span>Prompting with Intent</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand brand--mobile" href="index.html">Prompting with Intent</a>
+    <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
+      <span class="menu-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+  </header>
+
+  <div class="site-shell">
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar__inner">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="assets/favicon.svg" alt="" aria-hidden="true">
+          <span>Prompting with Intent</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-site-nav></nav>
+      </div>
     </aside>
 
-    <!-- Column 2: spotlight (top) + detail (bottom) -->
-    <main class="deck__col deck__col--main title-slide">
-      <section>
-        
+    <div class="sidebar-backdrop" data-close-menu></div>
+
+    <main class="content title-slide" id="main-content">
+      <section class="hero">
         <h1>Prompt Engineering: Designing Better AI Outcomes Through Structured Communication</h1>
-        <p>
+        <p class="hero__lede">
           Give the AI half a prompt and it will confidently hand you half an answer.
           The trick isn't a better model. It's a better prompt.
         </p>
       </section>
 
-      <section class="detail">
-        
-
+      <section class="content-section">
         <div class="joke">
           <p class="joke__row-label">First try</p>
           <div class="joke__grid">
@@ -41,19 +51,16 @@
               <figcaption>ChatGPT</figcaption>
               <img src="assets/chatgpt-wrong.png" alt="ChatGPT's first answer"
                 onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-              
             </figure>
             <figure data-joke-stage="1" hidden>
               <figcaption>Claude</figcaption>
               <img src="assets/claude-wrong.png" alt="Claude's first answer"
                 onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-              
             </figure>
             <figure data-joke-stage="1" hidden>
               <figcaption>Gemini</figcaption>
               <img src="assets/gemini-wrong.png" alt="Gemini's first answer"
                 onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-              
             </figure>
           </div>
 
@@ -63,40 +70,25 @@
               <figcaption>ChatGPT</figcaption>
               <img src="assets/chatgpt-right.png" alt="ChatGPT's corrected answer"
                 onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-              
             </figure>
             <figure data-joke-stage="2" hidden>
               <figcaption>Claude</figcaption>
               <img src="assets/claude-right.png" alt="Claude's corrected answer"
                 onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-              
             </figure>
             <figure data-joke-stage="2" hidden>
               <figcaption>Gemini</figcaption>
               <img src="assets/gemini-right.png" alt="Gemini's corrected answer"
                 onerror="this.onerror=null;this.src='assets/placeholder.svg'">
-              
             </figure>
           </div>
 
-          <button class="joke-reveal" type="button" data-joke-reveal>Reveal the others</button>
+          <button class="btn btn--primary" type="button" data-joke-reveal>Reveal the others</button>
         </div>
-
-        <dl class="presenter">
-          <div>
-            <dt>Presented by</dt>
-            <dd>Onkar Borgaonkar</dd>
-          </div>
-          <div>
-            <dt>Date</dt>
-            <dd>June 17, 2026</dd>
-          </div>
-        </dl>
       </section>
     </main>
   </div>
 
-  <script src="slides/slides.js"></script>
   <script src="script.js"></script>
 </body>
 

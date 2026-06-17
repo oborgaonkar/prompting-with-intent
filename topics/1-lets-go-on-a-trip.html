@@ -79,7 +79,7 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="mobile-header">
-    <a class="brand brand--mobile" href="index.html">Prompting with Intent</a>
+    <a class="brand brand--mobile" href="../index.html">Prompting with Intent</a>
     <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false">
       <span class="menu-toggle__icon" aria-hidden="true"></span>
       <span>Menu</span>
@@ -89,7 +89,7 @@
   <div class="site-shell">
     <aside class="sidebar" id="site-sidebar">
       <div class="sidebar__inner">
-        <a class="brand" href="index.html">
+        <a class="brand" href="../index.html">
           <img class="brand__mark" src="../assets/favicon.svg" alt="" aria-hidden="true">
           <span>Prompting with Intent</span>
         </a>
@@ -111,7 +111,7 @@
       </section>
 
       <section>
-        <button class="button-secondary" onclick="document.getElementById('trip-rt-prompt').hidden = false; this.style.opacity = 0;">Lets start the prompt</p>
+        <button class="btn btn--secondary" type="button" data-reveal-target="trip-rt-prompt">Lets start the prompt</button>
       </section>
 
       <section class="content-section">
@@ -148,9 +148,22 @@
     <aside class="rt-prompt" id="trip-rt-prompt" hidden>
       <p class="prompt_heading">Trip to Japan</p>
       <div class="prompt_lever_content">
-        <div class="prompt_lever_container">
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+        </div>
+        <div class="prompt_lever_container special">
           <p class="prompt_lever_label">Task</p>
           <p class="prompt_lever_text">Plan a trip to Japan.</p>
+        </div>
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">&lt;Who's going.&gt;</p>
+          <p class="prompt_lever_text">&lt;When.&gt;</p>
+        </div>
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A day-by-day itinerary</p>
         </div>
       </div>
     </aside>

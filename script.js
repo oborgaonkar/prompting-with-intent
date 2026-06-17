@@ -9,17 +9,18 @@
       href: "topics/2-why-ai-fails.html"
     },
     {
+      label: "It's a Menu",
+      href: "topics/3-general-prompt-structure.html"
+    },
+    {
       label: "Lets Go On A Trip",
       href: "topics/1-lets-go-on-a-trip.html"
     },
     {
-      heading: "Topics",
+      heading: "Levers",
       links: [
         
-        {
-          label: "General Prompt Structure",
-          href: "topics/3-general-prompt-structure.html"
-        },
+
         {
           label: "Directed vs. Discovered",
           href: "topics/6-directed-vs-discovered.html"
@@ -63,7 +64,7 @@
 
   function getPathPrefix() {
     var path = window.location.pathname;
-    return path.indexOf("/topics/") !== -1 || path.indexOf("/slides/") !== -1 ? "../" : "";
+    return path.indexOf("/topics/") !== -1 ? "../" : "";
   }
 
   function getCurrentPage() {
@@ -125,7 +126,31 @@
     });
   }
 
+  function renderSidebarFooter() {
+    var inner = document.querySelector(".sidebar__inner");
+
+    if (!inner) {
+      return;
+    }
+
+    var footer = document.createElement("div");
+    footer.className = "sidebar__footer";
+
+    var madeBy = document.createElement("p");
+    madeBy.className = "sidebar__footer-line";
+    madeBy.textContent = "Made by Onkar Borgaonkar";
+
+    var updated = document.createElement("p");
+    updated.className = "sidebar__footer-line";
+    updated.textContent = "Last updated: June 17, 2026";
+
+    footer.appendChild(madeBy);
+    footer.appendChild(updated);
+    inner.appendChild(footer);
+  }
+
   renderSiteNavigation();
+  renderSidebarFooter();
 
   var menuButton = document.querySelector(".menu-toggle");
   var closeTargets = document.querySelectorAll("[data-close-menu], .site-nav__link");
@@ -260,4 +285,54 @@
       setMenuOpen(false);
     }
   });
+
+  function setupJokeReveal() {
+    var button = document.querySelector("[data-joke-reveal]");
+    var figures = document.querySelectorAll("[data-joke-stage]");
+
+    if (!button || figures.length === 0) {
+      return;
+    }
+
+    var labels = ["Reveal the others", "Now watch them self-correct", ""];
+    var stage = 0;
+    var maxStage = 2;
+
+    function applyStage() {
+      figures.forEach(function (figure) {
+        var figureStage = Number(figure.getAttribute("data-joke-stage"));
+        var shouldShow = figureStage <= stage;
+        var wasHidden = figure.hidden;
+
+        figure.hidden = !shouldShow;
+
+        if (shouldShow && wasHidden) {
+          figure.classList.add("is-entering");
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              figure.classList.remove("is-entering");
+            });
+          });
+        }
+      });
+
+      if (stage >= maxStage) {
+        button.hidden = true;
+      } else {
+        button.textContent = labels[stage];
+      }
+    }
+
+    button.textContent = labels[0];
+    applyStage();
+
+    button.addEventListener("click", function () {
+      if (stage < maxStage) {
+        stage += 1;
+        applyStage();
+      }
+    });
+  }
+
+  setupJokeReveal();
 })();

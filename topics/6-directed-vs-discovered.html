@@ -43,38 +43,39 @@
       </section>
 
       <section class="content-section">
-        <h2>Make it a habit to chose what to specify</h2>
+        <h3>Choose how much creative freedon you want to give the AI</h3>
+        <p>What do you have in mind?</p>
         <div class="spec-slider" data-spec-slider>
           <div class="spec-slider__ends">
             <span>Discovered</span>
             <span>Directed</span>
           </div>
           <div class="spec-slider__track">
-            <input class="spec-slider__range" type="range" min="1" max="4" step="1" value="1"
+            <input class="spec-slider__range" type="range" min="1" max="4" step="1" value="4"
               aria-label="Prompt specificity" data-spec-range>
             <div class="spec-slider__stops" aria-hidden="true">
-              <span class="spec-slider__stop is-active" data-spec-stop="1"></span>
+              <span class="spec-slider__stop" data-spec-stop="1"></span>
               <span class="spec-slider__stop" data-spec-stop="2"></span>
               <span class="spec-slider__stop" data-spec-stop="3"></span>
-              <span class="spec-slider__stop" data-spec-stop="4"></span>
+              <span class="spec-slider__stop is-active" data-spec-stop="4"></span>
             </div>
           </div>
           <div class="spec-slider__columns">
             <div class="spec-slider__text is-selected" data-spec-text="1">
-              <p>Plan a trip to Japan. (no constraints)</p>
+              <p>&lt;No additional constraint&gt;</p>
               <hr>
               <ul class="no-bullets">
-                <li>🤖 Energy</li>
-                <li>🤖 City</li>
-                <li>🤖 Budget</li>
-                <li>🤖 Interests</li>
+                <li>🤖❓ Energy</li>
+                <li>🤖❓ City</li>
+                <li>🤖❓ Budget</li>
+                <li>🤖❓ Interests</li>
               </ul>
               <hr>
               <p>Might surface a town you'd never have found</p>
             </div>
             <div class="spec-slider__text" data-spec-text="2">
-              <p>Keep it relaxed, not a packed
-                schedule.</p><hr>
+              <p>Keep it relaxed, not a packed schedule.</p>
+              <hr>
               <ul class="no-bullets">
                 <li>🧑‍🦲 Energy</li>
                 <li>🤖 City</li>
@@ -83,8 +84,8 @@
               </ul>
             </div>
             <div class="spec-slider__text" data-spec-text="3">
-              <p>Tokyo and Kyoto, food-focused, budget
-                mid-range.</p><hr>
+              <p>Tokyo and Kyoto, food-focused, budget mid-range.</p>
+              <hr>
               <ul class="no-bullets">
                 <li>🧑‍🦲 Energy</li>
                 <li>🧑‍🦲 City</li>
@@ -93,46 +94,124 @@
               </ul>
             </div>
             <div class="spec-slider__text" data-spec-text="4">
-              <p>Three days Tokyo, four in Kyoto, max $200 a night, day for
-                open for a Nikko trip, no museums, hotels near a JR
-                line.</p><hr>
+              <p>Three days Tokyo, four in Kyoto, max $200 a night, day for open for a Nikko trip, no museums, hotels
+                near a JR line.</p>
+              <hr>
               <ul class="no-bullets">
                 <li>🧑‍🦲 Energy</li>
                 <li>🧑‍🦲 City</li>
                 <li>🧑‍🦲 Budget</li>
                 <li>🧑‍🦲 Interests</li>
-              </ul><hr>
+              </ul>
+              <hr>
               <p>Exactly what you pictured and nothing you didn't.</p>
+              <button class="btn btn--secondary" type="button" data-reveal-target="directions-lever">Add to
+                Prompt</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <button class="add-to-prompt" type="button" data-reveal-target="directions-lever">Add to Prompt</button>
+      <section class="content-section">
+        <p>Plan a birthday dinner for my partner</p>
+        <div class="spec-slider" data-spec-slider>
+          <div class="spec-slider__ends">
+            <span>Discovered</span>
+            <span>Directed</span>
+          </div>
+          <div class="spec-slider__track">
+            <input class="spec-slider__range" type="range" min="1" max="4" step="1" value="2"
+              aria-label="Prompt specificity" data-spec-range>
+            <div class="spec-slider__stops" aria-hidden="true">
+              <span class="spec-slider__stop" data-spec-stop="1"></span>
+              <span class="spec-slider__stop is-active" data-spec-stop="2"></span>
+              <span class="spec-slider__stop" data-spec-stop="3"></span>
+              <span class="spec-slider__stop" data-spec-stop="4"></span>
+            </div>
+          </div>
+          <div class="spec-slider__columns">
+            <div class="spec-slider__text is-selected" data-spec-text="1">
+              <p>&lt;Don't mention the birthday or partner's name&gt;</p>
+              <hr>
+              <ul class="no-bullets">
+                <li>🤖❓ City</li>
+                <li>🤖❓ Budget</li>
+                <li>🤖❓ Event</li>
+              </ul>
+              <hr>
+              <p>The birthday goes unmentioned, so the AI doesn't know there's anything special about that evening and
+                plans it like any other night.</p>
+            </div>
+            <div class="spec-slider__text" data-spec-text="2">
+              <p>One evening is my partner's birthday, make it special.</p>
+              <hr>
+              <ul class="no-bullets">
+                <li>🧑‍🦲 City</li>
+                <li>🤖 Budget</li>
+                <li>🤖 Event</li>
+              </ul>
+              <hr>
+              <p>You've flagged the occasion but left the date, the place, and what "special" means entirely to the AI.
+              </p>
+              <button class="btn btn--secondary" type="button" data-reveal-target="directions-lever-1">Add to
+                Prompt</button>
+            </div>
+            <div class="spec-slider__text" data-spec-text="3">
+              <p>Night three in Kyoto is my partner's birthday, plan a memorable dinner out.</p>
+              <hr>
+              <ul class="no-bullets">
+                <li>🧑‍🦲 City</li>
+                <li>🤖 Budget</li>
+                <li>🧑‍🦲 Event</li>
+              </ul>
+              <hr>
+              <p>The evening, the city, and the type of plan are fixed. The AI still picks the restaurant and the
+                details.</p>
+            </div>
+            <div class="spec-slider__text" data-spec-text="4">
+              <p>Night three in Kyoto is my partner's birthday: book a kaiseki dinner with a counter seat, somewhere
+                quiet enough to talk, under $150 a head, walkable from a JR line, and end the night somewhere with a
+                view.</p>
+              <hr>
+              <ul class="no-bullets">
+                <li>🧑‍🦲 City</li>
+                <li>🧑‍🦲 Budget</li>
+                <li>🧑‍🦲 Event</li>
+              </ul>
+              <hr>
+              <p>The occasion, the meal, the budget, the setting, and the close are all specified. The AI fills only the
+                smallest gaps.</p>
 
             </div>
+          </div>
+        </div>
       </section>
     </main>
     <aside class="rt-prompt">
       <p class="prompt_heading">Trip to Japan</p>
       <div class="prompt_lever_content">
         <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+        </div>
+        <div class="prompt_lever_container">
           <p class="prompt_lever_label">Task</p>
           <p class="prompt_lever_text">Plan a trip to Japan.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Context</p>
-          <p class="prompt_lever_text">Who's going.</p>
-          <p class="prompt_lever_text">When.</p>
-        </div>
-        <div class="prompt_lever_container">
-          <p class="prompt_lever_label">Role</p>
-          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+          <p class="prompt_lever_text">&lt;Who's going.&gt;</p>
+          <p class="prompt_lever_text">&lt;When.&gt;</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Output Format</p>
           <p class="prompt_lever_text">A day-by-day itinerary</p>
         </div>
-        <div class="prompt_lever_container" id="directions-lever" hidden>
+        <div class="prompt_lever_container special" id="directions-lever" hidden>
           <p class="prompt_lever_label">Directions</p>
           <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko
             trip, no museums, hotels near a JR line.</p>
+            <p class="prompt_lever_text" id="directions-lever-1" hidden>One evening is my partner's birthday, make it special.</p>
         </div>
       </div>
     </aside>

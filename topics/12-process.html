@@ -38,15 +38,13 @@
       <section class="hero">
         <h1>Process</h1>
         <p class="hero__lede">
-          Process is the how. Not what you want or how much thinking it needs, but the actual steps you want the agent
-          to follow to get there. When you know the method that produces a good answer, handing it over is often the
-          difference between a right answer and a confident wrong one.
+          Process is the actual steps you want the agent to follow to get there. When you know the method that produces
+          a good answer, handing it over is often the difference between a right answer and a confident wrong one.
         </p>
       </section>
-      <div class="callout">
-        <p>Depth tells the agent how hard to think. Process tells it how to think. Same goal, different lever: one sets
-          the effort, the other sets the method.</p>
-      </div>
+      <section>
+        <button class="btn btn--secondary" type="button" data-reveal-target="process-level">Add process</button>
+      </section>
       <section class="content-section">
         <h2>Why it matters</h2>
         <p>Most prompts describe a destination and leave the route entirely to the agent. Sometimes that's fine. But for
@@ -72,6 +70,38 @@
       </section>
 
     </main>
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Trip to Japan</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Role</p>
+          <p class="prompt_lever_text">Travel agent who knows Japan</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Task</p>
+          <p class="prompt_lever_text">Plan a trip to Japan.</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Context</p>
+          <p class="prompt_lever_text">&lt;Who's going.&gt;</p>
+          <p class="prompt_lever_text">&lt;When.&gt;</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Format</p>
+          <p class="prompt_lever_text">A day-by-day itinerary</p>
+        </div>
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Directions</p>
+          <p class="prompt_lever_text">Three days Tokyo, four in Kyoto, max $200 a night, day four open for a Nikko
+            trip, no museums, hotels near a JR line.</p>
+          <p class="prompt_lever_text">One evening is my partner's birthday, make it special.</p>
+        </div>
+        <div class="prompt_lever_container special" id="process-level" hidden>
+          <p class="prompt_lever_label">Process</p>
+          <p class="prompt_lever_text">Look for recommendations on Reddit, check recent Google Maps reviews, cross-reference what people are recommending on Reddit this year, then shortlist three with a line on why each fits a birthday.</p>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <script src="../script.js"></script>

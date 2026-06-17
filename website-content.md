@@ -1,40 +1,441 @@
+# Prompting with Intent — Website Content
 
+This document captures the content of the site page by page, in the order the pages appear in the navigation.
 
-So first I will start with structure feedback then I will tell you ui feedback then I will tell you maybe copy feedback.
-Structure of the left rail can be a little different. It can basically maybe have four things in the beginning that says home, why AI predictively fails, topics or levers or gaps pick one and keep using the same word for the entire presentation the last saying, conclusion or closing.
-When we reach the topics, then you show the eight or nine topics that you have.
+---
 
+## 1. Home
 
-In the homepage, there is a lot of text on the page we have prompting within intent as a eyebrow then the title which is got a lot of words, then a byline then a secondary title and another line then another title then another title then an image and a button this is too much. We should have it very simple, one title, maybe a line or just the image with the button and below that by line to support whatever you're saying for the image joke. On this page, the blue background is not necessary. Also the blue rectangle having a shadow is not necessary. Honestly nothing is required to be highlighted so just remove that and keep the layout simple. Also remove the previous next button those are not required.
+**Title:** Prompt Engineering: Designing Better AI Outcomes Through Structured Communication
 
+Give the AI half a prompt and it will confidently hand you half an answer. The trick isn't a better model. It's a better prompt.
 
-Here again you have the eyebrow I don't think that's required. Why AI fails predictably as the title is great below that I think what is throwing me off is the shadow maybe the spotlight should not have a shadow I'm not sure if it even needs a blue background maybe it can just be a line on the left with this text just like medium does for quotes. Below that the text is very long. I think that you need to have an image and you need to make it more impactful. Something like a coffee image with on the left saying think about ordering a coffee. Below that you have on the right top half that says give me a coffee and maybe big text and on the right you have things like iced oat latte, two shots, lighter, vanilla, Venti. In the bottom, you can say on the right that you filled so many gaps like oats instead of whole milk, two shot instead of one lightens of standard. This shows the comparison between the two scenarios showing that the fewer gaps leave the less the AI has to guess. Keep it very less text snappy and more visual text layout.
+**First try**
 
+- ChatGPT — [chatgpt-wrong.png]
+- Claude — [claude-wrong.png]
+- Gemini — [gemini-wrong.png]
 
-Then let's go for a trip is good. Again the eyebrow is not important and I know you're gonna remove the right panel, which is fine. Here in the byline you should say something like let's learn how to prompt intentionally filling out some of those gaps/topic/lovers. In this example, you can say that you go through around eight or nine lovers and they can pick and choose from them as they write the prompt but these are some that you learned from experience with AI for better prompt and more efficient prompts. Also, the images below the first image should be of a cherry blossom tree. the button is good, but maybe make it a secondary button. We don't need it so in the face. 
+**Second try**
 
+- ChatGPT — [chatgpt-right.png]
+- Claude — [claude-right.png]
+- Gemini — [gemini-right.png]
 
-Now we have topics right as soon as that happens you add in the right panel, but you also add the left panel in a way that shows the 10 or nine topics so you are basically now going one level below in that should be visually shown
-For general prompt structure now. This one is your first topic you cannot say general prompt structure because it is something you're calling out as a topic so it needs to be impactful. The key Takeaway here is that the levers are not a checklist, but a menu. That is not reflected by the title. The title says general prompt structure, and the images below also talk about the structure, but the key Takeaway is that it's a menu. That is not clear that or related. What you can do is that update the title to say something of that's sort menu not checklist for example and below you are saying structure instead say something like common prompt guides. Here you can call out that task context role are the most common ones in every photo. Don't call out one photo instead show that they are there everywhere. Basically those are the most common ones and the ones that are pretty impactful. So you say that, even though it's a menu, these ones are the basics. So in the Spotlight, you can say these or levels are not checklist but menu but the basics are the foundational ones are roll context and task this way you're showing with all the images have one thing in common. And this way you're also relating to the general prompt structure of the message that you're saying that this is the foundational pieces and not a checklist.
+Button: "Reveal the others"
 
+---
 
-In the directed versus discovered, I think you should put process above this. The reason I think that is because the process is very common and they know about it and most people do it and it is also relevant to the homepage example, but the rest of them are pretty hard hitting and something that they really don't know so maybe switch that first half process and then have directed versus discovered. In the process you need to maybe bring back the homepage example and share that see you shared the step-by-step process that you'd like the AI to follow and got a very strong result. This shows that this lever is extremely important. However, this one is not a Spotlight. In the Spotlight here you can say something around the fact that process is essentially telling a high processor or highly expert person what to do and how to do so that it follows your step-by-step guide. You can make this wording a little better, but essentially have this next.
+## 2. Why AI Fails Predictably
 
+AI does not fail randomly. When you leave a gap in your prompt, it fills that gap with the most statistically average answer from its training. The failures are predictable once you see them as missing context, not missing intelligence.
 
-Next page is directed versus discovered. In all the pages please remove the eyebrow. Here the by line is a pitch, but you want a spot like that so firstly, the UI of the spotlight needs to be consistent across all the pages. Here I would say the Spotlight can be how much creative freedom would you like to leave for the AI to create. In that example, you are going to share the progress on the right. So do not have the example in the middle talk about Japan. Is that what we're doing. Maybe you need to have this visual with respect to some Generic details. On the right you can have three options one being with a lot of details one being with minor details and one being very vague to show the variation of prompting with respect to your requirement. I like the slider it's good, but I think that the text that says make it a habit to choose what a specified does not make sense again here of think about something like creative freedom. The vague should become discovered versus the other one needs to say directed so that it keeps the theme. Here you have different details, but I think we were discussing the fact that this would show activities that you can do and Tokyo along with birthday celebration activities activity so you're letting him decide the activities or you can go in and say hey these are the five activities I want to do along with the fourth one being a birthday celebration so that's how you can show the variation and the openness for more ideas from the AI agent.
+### Have you ever ordered a coffee?
 
+[why-ai-fails.png]
 
-Prom depth again your spotlight is different from the other pages. It needs to be consistent a title a text that's it no other Ui element needs to be added. Here you have a by line another paragraph another paragraph three useful levels know this is very complicated. Maybe Spotlight the three useful levels that you have mentioned on the top so the three useful levels are quick standard and deep so you say that you know depth is about letting the AI know how detailed you prefer the response. In case you want a quick response or you wanted a really deep response, which means you're not having a lot of details the Spotlight these three things not that every needs a long answer like I think that that is not the spotlight here just those three useful levels is and rest of the paragraphs and text that you have you can add below the three useful levels having them explained below is great maybe keep that section 1st than any other information that you have then how to ask for something like that but basically keep this. update the depth word to effort. On the right, you can have something like give me the itinerary in a detailed format, but keep the rest of the explanation short for now. So this way you are kind of ensuring that the AI agent is putting effort in the table and not in the other things.
+Consider ordering coffee. Imagine a barista who has spent ten years mastering his craft, capable of making over fifty different drinks, any one of them excellent. You walk up and say, "I want a coffee." What do you get? Almost certainly the best-selling or highest-rated option—the safe average of everything people tend to order. You might love it. You might not. The barista's skill was never the limiting factor; your request was. But say instead, "I'd like an iced latte with oat milk and a double shot of espresso," and suddenly you are nearly guaranteed to get a drink you enjoy. Nothing about the barista changed. You simply closed the gaps he would otherwise have filled with the most popular guess.
 
+Same thing happens with AI. The fewer gaps you leave, the less it has to guess. And it doesn't guess randomly. It defaults to whatever's most common, the "whole milk" of its training data.
 
-So for grounding, I can't remove the eyebrow. Text header is fine and make it just one text paragraph below that for the spotlight make that ui consistent. Three questions are good and here you're giving the actual date, travel dates and all which is good so what I think you should do is on the right make that rail a little bigger and the left a little smaller because you're not using the left trail as much as we are seeing on the right trail, which is the most important space. In the middle, it's good what you have again keep the dividing lines that you have a little more consistent. I would say here you have too many dividing lines everywhere else you have just one maybe you don't need some dividing lines remove them just adds more visual clutter.
+---
 
+## 3. Prompt Structures are a Menu
 
-Rules and skills page again no eyebrow and make the paragraph before title correct just want. Rules are guard skills are expertise as good. I think that information below is good and on the right you added the scale of budget great. Here for the skill is budget, but for the rules if we were thinking of adding gluten-free restaurants only in the entire itinerary so the AI needs to recommend those restaurants throughout the journey.
+**Title:** It's a Menu, Not a Checklist
 
+The levers are not a checklist to fill out every time. They're a menu of levers you can choose from.
 
-In my opinion, the output evaluation and iteration and recovery is also part of the topics so you use it over there instead of having it within closing. You also ensure you have like a spotlight above and I think for output evaluation we were thinking of evaluating the weather and the drive time between cities to ensure theres time to relax and eat dinner at night.
-For the iteration and recovery I think that what you want going to say here is the three things that can go wrong or just have like a spotlight where you say that you know this in land or can you tell me what are the other assumptions you're making. This is a spot where you say that yes now we have completed all the levels but gaps might still exist. Assumptions might still exist so here we are gonna ask the AI agent himself. Do you have any more assumptions or make sure you interview me for any of the assumptions that you might be making or you know do you have any questions so don't make any decisions. This will help close it out. Here you can ask the same question to the AI like please interview me before you make any decisions on assumptions. Are you making any assumptions. And in the end you have the closing cheat sheet, which has the 7-8 levels along with the Spotlight text. Have a download PDF button over there where it basically downloads only this page as a PDF for anyone who would like to view it.
+### Structure
 
+Every framework is the same handful of levers. Your job is choosing which ones this task needs, not filling them all in.
 
-Maybe below it, you can have a section of how you can use this for Salesforce so that in the cheat sheet itself you have that Salesforce response and that can just help people as they move forward. You can also in the cheat sheet make it a table where the first column is the level. The second column is the spotlight details in the third column is how you can use it in Salesforce. That way that also can become a cheat sheet that can be downloaded and you cover what you are aiming to do which is the fun example and then finishing it off. 
+- [prompt_structure_1.png] — Basic AI prompt template with structure and example columns
+- [prompt_structure_2.png] — Table describing the structure of a good prompt
+- [prompt_structure_3.png] — Prompt sections for role, format, constraints, logic, stop conditions, context, and task
+- [prompt_structure_4.png] — Prompt components grouped by mandatory, important, and nice-to-have
+- [prompt_structure_5.png] — Key elements of an effective AI prompt
+- [prompt_structure_6.png] — Anatomy of a Claude prompt with labeled sections
+- [prompt_structure_7.png] — Six-step prompt checklist ranked by importance
+- [prompt_structure_8.png] — CRISPE framework for structured prompting
+
+### Key Points
+
+Those frameworks look different, but they're the same handful of levers wearing different names: role, task, context, format, constraints, examples. Once you see that, the specific framework you start from stops mattering.
+
+The trap is treating every lever as a box to tick. Fill them all in on every prompt and you bury the one thing the task actually needed under a pile of detail it didn't.
+
+So treat it like a menu. The task is the only thing you always order, so start there, every time. Then add context, examples, constraints, or format only when the task in front of you calls for them. A throwaway question needs one line. A production design needs several. Same menu, different order.
+
+---
+
+## 4. Lets Design Together
+
+**Title:** Lets Design a Case Management Console Together
+
+Let's take this from a vague ask to a real design, the way you'd brief a thoughtful junior designer. We'll add one lever at a time and shape it into something complete.
+
+Button: "Lets start the prompt"
+
+**Prompt panel — Case Management Console**
+
+- **Role:** UX designer who knows the Salesforce Lightning Design System and service cloud patterns
+- **Task:** Design a case management console for the support team.
+- **Context:** Tier-one support agents handling 50+ cases a day. They live in this screen for a full shift, with high volume, lots of context-switching between cases.
+- **Output Format:** A screen-by-screen layout with component names and a short rationale for each region
+
+---
+
+## 5. Directed vs. Discovered
+
+Are you executing a vision, or leaving room for the AI to surprise you? Know which one before you start.
+
+### Choose how much creative freedon you want to give the AI
+
+What do you have in mind?
+
+Specificity slider (Discovered → Directed):
+
+- **Discovered:** "Design whatever console you think works best."
+  - 🤖❓ Layout
+  - 🤖❓ Components
+  - 🤖❓ Triage sort
+  - 🤖❓ Knowledge panel
+  - The AI picks the layout, the components, everything.
+- "Build it around fast triage, agents need to see what's urgent without clicking in."
+  - 🤖 Layout
+  - 🤖 Components
+  - 🧑‍🦲 Triage sort
+  - 🤖 Knowledge panel
+  - You've set a principle, left the execution open.
+- "Three-column layout: case list, case detail, and a side panel for knowledge articles. Use standard SLDS components."
+  - 🧑‍🦲 Layout
+  - 🧑‍🦲 Components
+  - 🤖 Triage sort
+  - 🧑‍🦲 Knowledge panel
+  - Structure fixed, the AI fills the detail.
+- **Directed:** "Three columns. Left: a filterable case list sorted by SLA breach risk. Center: case detail with the activity timeline collapsed by default. Right: a knowledge panel that surfaces articles based on case subject. Use the SLDS data table, no custom components, keep everything above the fold at 1280px."
+  - 🧑‍🦲 Layout
+  - 🧑‍🦲 Components
+  - 🧑‍🦲 Triage sort
+  - 🧑‍🦲 Knowledge panel
+  - The AI fills only the smallest gaps.
+  - Button: "Add to Prompt"
+
+**Prompt panel — Case Management Console**
+
+- **Role:** UX designer who knows the Salesforce Lightning Design System and service cloud patterns
+- **Task:** Design a case management console for the support team.
+- **Context:** Tier-one support agents handling 50+ cases a day. They live in this screen for a full shift, with high volume, lots of context-switching between cases.
+- **Output Format:** A screen-by-screen layout with component names and a short rationale for each region
+- **Directions:** Three columns. Left: a filterable case list sorted by SLA breach risk. Center: case detail with the activity timeline collapsed by default. Right: a knowledge panel that surfaces articles based on case subject. Use the SLDS data table, no custom components, keep everything above the fold at 1280px.
+
+---
+
+## 6. Process
+
+Process is the actual steps you want the agent to follow to get there. When you know the method that produces a good answer, handing it over is often the difference between a right answer and a confident wrong one.
+
+Button: "Add process"
+
+### Why it matters
+
+Most prompts describe a destination and leave the route entirely to the agent. Sometimes that's fine. But for tasks where the way you reach the answer determines whether it's correct, leaving the route open is how you get answers that look right and aren't.
+
+The console makes this concrete. Say you ask the agent to design a case management console. With no process, it jumps straight to a layout, arranging components by convention rather than by how agents actually work. Give it the route instead: first map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components. The design stops being a guess at a layout and starts being the result of a method you'd trust.
+
+That's the lever. When you know the steps that lead to a good answer, write them into the prompt rather than hoping the agent picks the same path. Where Grounding hands over facts and Rules set the guardrails, Process hands over the method.
+
+One thing to note: you don't always want to specify the process. If the agent's own approach is likely better than yours, leaving the route open is the smarter call, the same way discovery can beat direction. Process is a lever you reach for when the method matters to whether the answer is right, not a step you bolt onto every prompt.
+
+**Prompt panel — Case Management Console**
+
+- **Role:** UX designer who knows the Salesforce Lightning Design System and service cloud patterns
+- **Task:** Design a case management console for the support team.
+- **Context:** Tier-one support agents handling 50+ cases a day. They live in this screen for a full shift, with high volume, lots of context-switching between cases.
+- **Output Format:** A screen-by-screen layout with component names and a short rationale for each region
+- **Directions:** Three columns. Left: a filterable case list sorted by SLA breach risk. Center: case detail with the activity timeline collapsed by default. Right: a knowledge panel that surfaces articles based on case subject. Use the SLDS data table, no custom components, keep everything above the fold at 1280px.
+- **Process:** First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.
+
+---
+
+## 7. Prompt Depth
+
+**Title:** Prompt Effort
+
+Prompt Effort is about telling the AI how much thinking, detail, and verification the task actually needs. It's also called reasoning effort or thinking level.
+
+### How to choose prompt effort
+
+Effort slider (Auto → Quick → Standard → Deep):
+
+- **Auto:** &lt;No additional constraint&gt; — You don't say how much effort to put in, so the AI picks the depth on its own based on what the task looks like it needs.
+- **Quick:** "Give me a rough wireframe-level layout, no reasoning." — A fast pass. You want the regions blocked out and little else.
+- **Standard:** "Give me the layout plus why each region is placed where it is, enough to brief a developer." — A useful answer you can act on, with enough reasoning to hand off. Button: "Add to Prompt"
+- **Deep:** "Give me the layout, the rationale, accessibility considerations for agents using screen readers, two options for the side panel with tradeoffs, and a note on where the design might strain at high case volume." — Maximum thinking and output, for when the design has to land.
+
+**Prompt panel — Case Management Console**
+
+- **Role:** UX designer who knows the Salesforce Lightning Design System and service cloud patterns
+- **Task:** Design a case management console for the support team.
+- **Context:** Tier-one support agents handling 50+ cases a day. They live in this screen for a full shift, with high volume, lots of context-switching between cases.
+- **Output Format:** A screen-by-screen layout with component names and a short rationale for each region
+- **Directions:** Three columns. Left: a filterable case list sorted by SLA breach risk. Center: case detail with the activity timeline collapsed by default. Right: a knowledge panel that surfaces articles based on case subject. Use the SLDS data table, no custom components, keep everything above the fold at 1280px.
+- **Process:** First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.
+- **Effort:** The layout plus why each region is placed where it is — enough to brief a developer.
+
+---
+
+## 8. Grounding
+
+Grounding gives AI the facts, sources, and constraints it needs to answer from reliable context instead of letting it generate from training data alone.
+
+Before you make your request, answer these three questions in the prompt itself:
+
+- What already exists
+- What you're trying to get to
+- What you've already tried, or ruled out
+
+### Why Grounding Matters
+
+Without grounding, the AI fills gaps with the most statistically probable answer from its training. That's where hallucinations come from. It's not lying, it's pattern-matching in the absence of facts. Grounding removes that gap.
+
+### How to Ground a Prompt
+
+Adding md files to the project folder is the easiest way to ground a prompt.
+
+**Project brief** (What exists already / What I'm trying to achieve)
+
+A single file covering:
+
+- Client name, industry, what their Salesforce instance is for
+- The specific project goal — what you're designing and why
+- Key stakeholders and their concerns
+- What's in scope and what's explicitly out of scope
+
+**Salesforce config dump** (What exists already)
+
+Export or paste the relevant metadata — objects, fields, relationships, and naming conventions specific to this client. A trimmed spreadsheet works. This stops the agent from inventing field names or assuming standard objects when the client has custom ones.
+
+**Current page or screen audit** (What exists already)
+
+Screenshots or a Figma file of the UI users actually see today. Without this, the agent designs in a vacuum — and often duplicates something that already exists or conflicts with what it's replacing.
+
+**Figma-to-SLDS mapping** (What exists already / What I'm trying to achieve)
+
+Document your component-to-SLDS mapping explicitly. "This card maps to lightning-card. This input maps to lightning-input with this variant." Now the agent generates code that matches your design instead of interpreting it.
+
+**Org-specific component library** (What exists already)
+
+A pattern inventory of custom components beyond base SLDS. Prevents the agent from suggesting things that already exist, are forbidden, or are due for deprecation.
+
+**Navigation and permissions model** (What exists already)
+
+- What page layouts, app pages, and navigation items exist
+- Which profiles or permissions control access to them
+
+The agent needs to know where your design lives in the org before it can make sensible placement decisions.
+
+**User personas or role matrix** (What I'm trying to achieve)
+
+- Job titles and technical comfort levels
+- What each role is actually trying to do in Salesforce
+
+Grounds the agent in real user goals rather than system requirements.
+
+**Journey map or task flow** (What exists already / What I'm trying to achieve)
+
+The step-by-step process users follow today, even if it's rough. Shows the agent what the current experience looks like and where the design needs to step in.
+
+**Known pain points** (What I'm trying to achieve / What I've tried or ruled out)
+
+A short list of what users complain about or struggle with — even from informal feedback or a Slack thread. Tells the agent what you're solving for, and signals what hasn't worked.
+
+**Accessibility constraints** (What I'm trying to achieve / What I've tried or ruled out)
+
+- WCAG level required
+- Org-specific a11y rules
+- Screen reader expectations
+
+Often a ruled-out direction is "we tried X but it failed accessibility review" — this is the place to say that explicitly.
+
+**Stakeholder constraints** (What I'm trying to achieve / What I've tried or ruled out)
+
+Non-negotiables tied to specific people. "The VP of Sales won't approve modal-heavy flows." "IT requires all data to stay in standard objects." If it's going to get vetoed, the agent should know before it builds.
+
+**Prior design explorations** (What I've tried or ruled out)
+
+Rejected Figma concepts, killed prototypes, directions leadership already said no to. The most underused resource on this list. Drop them in and the agent stops re-suggesting dead ends.
+
+**Release or sprint scope** (What I'm trying to achieve / What I've tried or ruled out)
+
+What's getting built this cycle vs. what's future state. Keeps the agent from designing the full vision when you only need the MVP.
+
+**Decision log** (What I've tried or ruled out)
+
+A running list of design decisions already made and why. "We chose a modal over a new page for record creation because of the client's navigation constraints." Stops the agent from reopening closed questions.
+
+**Session handoff note** (What exists already / What I've tried or ruled out)
+
+End each session by asking the agent: "Summarize what we built today, what decisions were made, and what's next." Paste that at the top of the next session. It's a cheap memory bridge.
+
+**Prompt panel — Case Management Console**
+
+- **Role:** UX designer who knows the Salesforce Lightning Design System and service cloud patterns
+- **Task:** Design a case management console for the support team.
+- **Context:** Tier-one support agents handling 50+ cases a day. They live in this screen for a full shift, with high volume, lots of context-switching between cases.
+- **Output Format:** A screen-by-screen layout with component names and a short rationale for each region
+- **Directions:** Three columns. Left: a filterable case list sorted by SLA breach risk. Center: case detail with the activity timeline collapsed by default. Right: a knowledge panel that surfaces articles based on case subject. Use the SLDS data table, no custom components, keep everything above the fold at 1280px.
+- **Process:** First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.
+- **Effort:** The layout plus why each region is placed where it is — enough to brief a developer.
+- **Grounding Details:** Your actual case object fields, the SLA definitions your org uses, a screenshot of the current console, the SLDS version you're on.
+
+---
+
+## 9. Rules and Skills
+
+Rules and Skills are repeatable instructions that can be used to improve the quality of the output.
+
+- Rules are the guardrails that hold throughout your chat
+- Skills are expertise in a field that the AI can bring to the table
+
+### Rules
+
+**Definition:** Short, persistent "Do" or "Don't" instructions that are supposed to be followed for every prompt in your current workspace.
+
+**Example:**
+
+- Always use SLDS component names, never invent custom component labels
+- Never suggest a new pattern if an existing SLDS component covers the use case
+- Always flag accessibility issues before suggesting visual changes
+
+Can be thought of as a "code of conduct" or "guardrails" for the AI.
+
+Rules govern every response.
+
+In Claude.ai, rules live in your Project instructions. In Cursor, they live in your .cursor/rules/*.mdc (latest) or .cursorrules (older versions) file. Set them once and they're active for every prompt in that context.
+
+### Skills
+
+**Definition:** Skills are reusable instruction sets that teach the AI how to behave in a specific domain.
+
+**Example:**
+
+- "Review any design description or component spec against WCAG 2.1 AA. Flag contrast issues, missing focus states, touch target sizes, and screen reader considerations. Be specific about what fails and why."
+- "You are a design director. When I share work, evaluate it across: user clarity, business alignment, technical feasibility, and consistency with existing patterns. Give me the hard feedback, not the kind version."
+- "When I describe a product problem, help me think upstream. Push back if I'm jumping to solutions. Ask about the job to be done, what success looks like in 6 months, and what we'd need to believe for this to work."
+
+Can be thought of as a "expertise" for the AI.
+
+Skills activate a mode of thinking.
+
+In Claude.ai, skills live in your Project instructions alongside your rules. In Cursor, they go in your .cursor/rules/*.mdc (latest) or .cursorrules (older versions) file as a named block. In a Slackbot, they live in the system prompt configured when the bot is set up. In all three cases, the principle is the same: you write the expertise once, and the AI carries it into every interaction.
+
+**Prompt panel — Case Management Console**
+
+- **Role:** UX designer who knows the Salesforce Lightning Design System and service cloud patterns
+- **Task:** Design a case management console for the support team.
+- **Context:** Tier-one support agents handling 50+ cases a day. They live in this screen for a full shift, with high volume, lots of context-switching between cases.
+- **Output Format:** A screen-by-screen layout with component names and a short rationale for each region
+- **Directions:** Three columns. Left: a filterable case list sorted by SLA breach risk. Center: case detail with the activity timeline collapsed by default. Right: a knowledge panel that surfaces articles based on case subject. Use the SLDS data table, no custom components, keep everything above the fold at 1280px.
+- **Process:** First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.
+- **Effort:** The layout plus why each region is placed where it is — enough to brief a developer.
+- **Grounding Details:** Your actual case object fields, the SLA definitions your org uses, a screenshot of the current console, the SLDS version you're on.
+- **Rule:**
+  - Always use SLDS components over custom components
+  - Never put a primary action below the fold
+  - Every interactive element meets WCAG 2.1 AA
+- **Skill:**
+  - Use an /accessibility_audit skill that checks contrast and focus order
+  - Use a /design_system_compliance skill that flags any component not in SLDS
+
+---
+
+## 10. Output Evaluation
+
+Getting a bad output isn't a failure. It's information. The question is what you do with it.
+
+### Four things worth building in
+
+- **Ask it to critique its own answer.** 'Review what you just wrote. Does it actually answer what I asked? What's the weakest part?' Simple, and most people never do it.
+- **Ask it to list its assumptions.** Every output is built on things you didn't say. 'List the assumptions you made that I should verify.' That list is usually where the problems are.
+- **Ask it to flag uncertainty.** AI writes confident prose even when the reasoning is thin. 'Tell me where you're least confident and why' breaks that habit fast.
+- **Ask it to check against something specific.** 'Check this against WCAG 2.1 AA. Tell me what fails and what you're unsure about.' The more specific the standard, the more useful the answer.
+
+**Prompt panel — Case Management Console**
+
+- **Output Evaluation:** Before I review this, check it yourself. Does it answer the original question? What assumptions did you make that I should verify? Where are you least confident? Flag anything that could be wrong for a &lt;context&gt;.
+
+---
+
+## 11. Iteration Or Recovery
+
+A clean start with a better prompt beats ten rounds of correction.
+
+[iterate-vs-recover.png]
+
+**Prompt panel — Case Management Console**
+
+- **Output Evaluation:** Before I review this, check it yourself. Does it answer the original question? What assumptions did you make that I should verify? Where are you least confident? Flag anything that could be wrong for a &lt;context&gt;.
+- **Iteration Or Recovery:** Summarize what you currently think I want
+
+---
+
+## 12. Closing / Cheat Sheet
+
+**Title:** Cheat Sheet
+
+The parts worth keeping. Use this when you're about to prompt something important.
+
+### Before you start
+
+Three questions to answer before you type:
+
+- What already exists
+- What you're trying to achieve
+- What you've already tried or ruled out
+
+If you can't answer all three, you're not ready yet.
+
+### The prompt structure
+
+- **Always required:** Task. What you want the AI to do.
+- **Usually needed:** Context, grounding, rules, skills, reasoning.
+- **Add when useful:** Role, constraints, examples, output format.
+
+### The two dials
+
+Specificity is how much direction you give. Depth is how much thinking you ask for. If you don't set them, the AI guesses both.
+
+- **Quick:** 'Give me the short version.'
+- **Standard:** 'Explain it with examples and next steps.'
+- **Deep:** 'Think through edge cases, flag tradeoffs, tell me what could go wrong.'
+
+### The underused levers
+
+Most people use task, context, and role and stop there. These three are worth the extra effort:
+
+- **Grounding:** paste in the doc, spec, or decision log. Specific context produces specific answers.
+- **Rules:** set once in your project instructions. Always use SLDS component names. Always flag accessibility before suggesting visual changes.
+- **Skills:** set once. 'You are a design director. Evaluate my work across user clarity, business alignment, technical feasibility, and consistency with existing patterns. Give me the hard feedback.'
+
+### When output misses
+
+When output misses, diagnose before you re-prompt:
+
+- **Task unclear:** restate with more specificity
+- **Context missing:** add the grounding you left out
+- **Depth wrong:** say so directly
+- **Format wrong:** show it an example
+
+Refine when the AI still has the right general understanding of what you need. Restart when it has locked onto a wrong interpretation and keeps returning to it.
+
+Recovery prompt: 'That didn't land. Here's what I was actually looking for: [describe it]. Here's what was wrong: [be specific]. Try again.'
+
+### Build evaluation in
+
+Add this to any high-stakes prompt:
+
+'Before I review this, check it yourself. Does it answer the original question? What assumptions did you make that I should verify? Where are you least confident? Flag anything that could be wrong for a &lt;context&gt;.'
+
+Change the last sentence to fit your domain. The first three questions work for almost anything.

@@ -37,12 +37,14 @@
     <main class="content" id="main-content">
       <section class="hero">
         <h1>Grounding</h1>
-        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
-          Grounding gives AI the facts, sources, and constraints it needs to answer from reliable context instead of
-          letting it generate from training data alone.
-        </p>
-        <div >
-          <p>Before you make your request, answer these three questions in the prompt itself:</p>
+        <div class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          <p>
+            Grounding gives AI the facts, sources, and constraints it needs to answer from reliable context instead of
+            letting it generate from training data alone.
+          </p>
+          <br/>
+          <p>Before you make your request,
+            answer these three questions in the prompt itself:</p>
           <ul>
             <li>What already exists</li>
             <li>What you're trying to get to</li>
@@ -68,199 +70,205 @@
           Adding md files to the project folder is the easiest way to ground a prompt.
         </p>
         <div class="resource-grid">
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Project brief</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Project brief</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+              </div>
             </div>
+            <p>A single file covering:</p>
+            <ul>
+              <li>Client name, industry, what their Salesforce instance is for</li>
+              <li>The specific project goal — what you're designing and why</li>
+              <li>Key stakeholders and their concerns</li>
+              <li>What's in scope and what's explicitly out of scope</li>
+            </ul>
           </div>
-          <p>A single file covering:</p>
-          <ul>
-            <li>Client name, industry, what their Salesforce instance is for</li>
-            <li>The specific project goal — what you're designing and why</li>
-            <li>Key stakeholders and their concerns</li>
-            <li>What's in scope and what's explicitly out of scope</li>
-          </ul>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Salesforce config dump</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Salesforce config dump</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+              </div>
             </div>
+            <p>Export or paste the relevant metadata — objects, fields, relationships, and naming conventions specific
+              to
+              this client. A trimmed spreadsheet works. This stops the agent from inventing field names or assuming
+              standard objects when the client has custom ones.</p>
           </div>
-          <p>Export or paste the relevant metadata — objects, fields, relationships, and naming conventions specific to
-            this client. A trimmed spreadsheet works. This stops the agent from inventing field names or assuming
-            standard objects when the client has custom ones.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Current page or screen audit</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Current page or screen audit</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+              </div>
             </div>
+            <p>Screenshots or a Figma file of the UI users actually see today. Without this, the agent designs in a
+              vacuum
+              — and often duplicates something that already exists or conflicts with what it's replacing.</p>
           </div>
-          <p>Screenshots or a Figma file of the UI users actually see today. Without this, the agent designs in a vacuum
-            — and often duplicates something that already exists or conflicts with what it's replacing.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Figma-to-SLDS mapping</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Figma-to-SLDS mapping</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+              </div>
             </div>
+            <p>Document your component-to-SLDS mapping explicitly. "This card maps to lightning-card. This input maps to
+              lightning-input with this variant." Now the agent generates code that matches your design instead of
+              interpreting it.</p>
           </div>
-          <p>Document your component-to-SLDS mapping explicitly. "This card maps to lightning-card. This input maps to
-            lightning-input with this variant." Now the agent generates code that matches your design instead of
-            interpreting it.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Org-specific component library</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Org-specific component library</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+              </div>
             </div>
+            <p>A pattern inventory of custom components beyond base SLDS. Prevents the agent from suggesting things that
+              already exist, are forbidden, or are due for deprecation.</p>
           </div>
-          <p>A pattern inventory of custom components beyond base SLDS. Prevents the agent from suggesting things that
-            already exist, are forbidden, or are due for deprecation.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Navigation and permissions model</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Navigation and permissions model</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+              </div>
             </div>
+            <ul>
+              <li>What page layouts, app pages, and navigation items exist</li>
+              <li>Which profiles or permissions control access to them</li>
+            </ul>
+            <p>The agent needs to know where your design lives in the org before it can make sensible placement
+              decisions.
+            </p>
           </div>
-          <ul>
-            <li>What page layouts, app pages, and navigation items exist</li>
-            <li>Which profiles or permissions control access to them</li>
-          </ul>
-          <p>The agent needs to know where your design lives in the org before it can make sensible placement decisions.
-          </p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">User personas or role matrix</strong>
-            <div class="pills">
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">User personas or role matrix</strong>
+              <div class="pills">
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+              </div>
             </div>
+            <ul>
+              <li>Job titles and technical comfort levels</li>
+              <li>What each role is actually trying to do in Salesforce</li>
+            </ul>
+            <p>Grounds the agent in real user goals rather than system requirements.</p>
           </div>
-          <ul>
-            <li>Job titles and technical comfort levels</li>
-            <li>What each role is actually trying to do in Salesforce</li>
-          </ul>
-          <p>Grounds the agent in real user goals rather than system requirements.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Journey map or task flow</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Journey map or task flow</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+              </div>
             </div>
+            <p>The step-by-step process users follow today, even if it's rough. Shows the agent what the current
+              experience looks like and where the design needs to step in.</p>
           </div>
-          <p>The step-by-step process users follow today, even if it's rough. Shows the agent what the current
-            experience looks like and where the design needs to step in.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Known pain points</strong>
-            <div class="pills">
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Known pain points</strong>
+              <div class="pills">
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <p>A short list of what users complain about or struggle with — even from informal feedback or a Slack
+              thread.
+              Tells the agent what you're solving for, and signals what hasn't worked.</p>
           </div>
-          <p>A short list of what users complain about or struggle with — even from informal feedback or a Slack thread.
-            Tells the agent what you're solving for, and signals what hasn't worked.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Accessibility constraints</strong>
-            <div class="pills">
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Accessibility constraints</strong>
+              <div class="pills">
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <ul>
+              <li>WCAG level required</li>
+              <li>Org-specific a11y rules</li>
+              <li>Screen reader expectations</li>
+            </ul>
+            <p>Often a ruled-out direction is "we tried X but it failed accessibility review" — this is the place to say
+              that explicitly.</p>
           </div>
-          <ul>
-            <li>WCAG level required</li>
-            <li>Org-specific a11y rules</li>
-            <li>Screen reader expectations</li>
-          </ul>
-          <p>Often a ruled-out direction is "we tried X but it failed accessibility review" — this is the place to say
-            that explicitly.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Stakeholder constraints</strong>
-            <div class="pills">
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Stakeholder constraints</strong>
+              <div class="pills">
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <p>Non-negotiables tied to specific people. "The VP of Sales won't approve modal-heavy flows." "IT requires
+              all data to stay in standard objects." If it's going to get vetoed, the agent should know before it
+              builds.
+            </p>
           </div>
-          <p>Non-negotiables tied to specific people. "The VP of Sales won't approve modal-heavy flows." "IT requires
-            all data to stay in standard objects." If it's going to get vetoed, the agent should know before it builds.
-          </p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Prior design explorations</strong>
-            <div class="pills">
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Prior design explorations</strong>
+              <div class="pills">
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <p>Rejected Figma concepts, killed prototypes, directions leadership already said no to. The most underused
+              resource on this list. Drop them in and the agent stops re-suggesting dead ends.</p>
           </div>
-          <p>Rejected Figma concepts, killed prototypes, directions leadership already said no to. The most underused
-            resource on this list. Drop them in and the agent stops re-suggesting dead ends.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Release or sprint scope</strong>
-            <div class="pills">
-              <span class="pill pill-achieve">What I'm trying to achieve</span>
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Release or sprint scope</strong>
+              <div class="pills">
+                <span class="pill pill-achieve">What I'm trying to achieve</span>
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <p>What's getting built this cycle vs. what's future state. Keeps the agent from designing the full vision
+              when you only need the MVP.</p>
           </div>
-          <p>What's getting built this cycle vs. what's future state. Keeps the agent from designing the full vision
-            when you only need the MVP.</p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Decision log</strong>
-            <div class="pills">
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Decision log</strong>
+              <div class="pills">
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <p>A running list of design decisions already made and why. "We chose a modal over a new page for record
+              creation because of the client's navigation constraints." Stops the agent from reopening closed questions.
+            </p>
           </div>
-          <p>A running list of design decisions already made and why. "We chose a modal over a new page for record
-            creation because of the client's navigation constraints." Stops the agent from reopening closed questions.
-          </p>
-        </div>
 
-        <div class="resource">
-          <div class="resource-header">
-            <strong class="resource-title">Session handoff note</strong>
-            <div class="pills">
-              <span class="pill pill-exists">What exists already</span>
-              <span class="pill pill-tried">What I've tried or ruled out</span>
+          <div class="resource">
+            <div class="resource-header">
+              <strong class="resource-title">Session handoff note</strong>
+              <div class="pills">
+                <span class="pill pill-exists">What exists already</span>
+                <span class="pill pill-tried">What I've tried or ruled out</span>
+              </div>
             </div>
+            <p>End each session by asking the agent: "Summarize what we built today, what decisions were made, and
+              what's
+              next." Paste that at the top of the next session. It's a cheap memory bridge.</p>
           </div>
-          <p>End each session by asking the agent: "Summarize what we built today, what decisions were made, and what's
-            next." Paste that at the top of the next session. It's a cheap memory bridge.</p>
-        </div>
         </div>
       </section>
     </main>
@@ -269,7 +277,8 @@
       <div class="prompt_lever_content">
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Role</p>
-          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud patterns</p>
+          <p class="prompt_lever_text">UX designer who knows the Salesforce Lightning Design System and service cloud
+            patterns</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Task</p>
@@ -278,35 +287,42 @@
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Context</p>
           <p class="prompt_lever_text">Tier-one support agents handling 50+ cases a day.</p>
-          <p class="prompt_lever_text">They live in this screen for a full shift — high volume, lots of context-switching between cases.</p>
+          <p class="prompt_lever_text">They live in this screen for a full shift, with high volume, lots of
+            context-switching between cases.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Output Format</p>
-          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each region</p>
+          <p class="prompt_lever_text">A screen-by-screen layout with component names and a short rationale for each
+            region</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Directions</p>
-          <p class="prompt_lever_text">Three columns.<br/>Left: a filterable case list sorted by SLA breach risk.<br/>Center:
-            case detail with the activity timeline collapsed by default.<br/>Right: a knowledge panel that surfaces
+          <p class="prompt_lever_text">Three columns.<br />Left: a filterable case list sorted by SLA breach
+            risk.<br />Center:
+            case detail with the activity timeline collapsed by default.<br />Right: a knowledge panel that surfaces
             articles based on case subject. Use the SLDS data table, no custom components, keep everything above the
             fold at 1280px.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Process</p>
-          <p class="prompt_lever_text">First map the agent's task flow from case assignment to resolution, identify the moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then pick components.</p>
+          <p class="prompt_lever_text">First map the agent's task flow from case assignment to resolution, identify the
+            moments of highest cognitive load, then design the layout to reduce clicks at those moments, and only then
+            pick components.</p>
         </div>
         <div class="prompt_lever_container">
           <p class="prompt_lever_label">Effort</p>
-          <p class="prompt_lever_text">The layout plus why each region is placed where it is — enough to brief a developer.</p>
+          <p class="prompt_lever_text">The layout plus why each region is placed where it is — enough to brief a
+            developer.</p>
         </div>
-        <div class="prompt_lever_container special" >
+        <div class="prompt_lever_container special">
           <p class="prompt_lever_label">Grounding Details</p>
-          <p class="prompt_lever_text">Your actual case object fields, the SLA definitions your org uses, a screenshot of the current console, the SLDS version you're on.</p>
+          <p class="prompt_lever_text">Your actual case object fields, the SLA definitions your org uses, a screenshot
+            of the current console, the SLDS version you're on.</p>
         </div>
       </div>
     </aside>
   </div>
-  
+
   <script src="../script.js"></script>
 </body>
 

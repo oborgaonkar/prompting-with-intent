@@ -36,9 +36,20 @@
 
     <main class="content" id="main-content">
       <section class="hero">
-        <h1>Iteration &amp; Recovery</h1>
+        <h1>Iteration Or Recovery</h1>
         <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
-          Getting a bad output isn't a failure. It's information. The question is what you do with it.
+          A clean start with a better prompt beats ten rounds of correction.
+        </p>
+      </section>
+      <section class="content-section">
+        <img src="../assets/iterate-vs-recover.png" alt="Iteration or Recovery" />
+      </section>
+    </main>
+    <!-- <main class="content" id="main-content-1" hidden>
+      <section class="hero">
+        <h1>Iteration Or Recovery</h1>
+        <p class="hero__lede" style="border-left: 6px solid #d1d5db; padding-left: 1rem;">
+          A clean start with a better prompt beats ten rounds of correction.
         </p>
       </section>
 
@@ -89,7 +100,22 @@
         <p>Two blanks. If you can't fill them in, the problem is your own clarity, not the AI's output. That's useful to
           know too.</p>
       </section>
-    </main>
+    </main> -->
+    <aside class="rt-prompt">
+      <p class="prompt_heading">Case Management Console</p>
+      <div class="prompt_lever_content">
+        <div class="prompt_lever_container">
+          <p class="prompt_lever_label">Output Evaluation</p>
+          <p class="prompt_lever_text">Before I review this, check it yourself. Does it answer the original question?
+            What assumptions did you make that I should verify? Where are you least confident? Flag anything that could
+            be wrong for a &lt;context&gt;.</p>
+        </div>
+        <div class="prompt_lever_container special">
+          <p class="prompt_lever_label">Iteration Or Recovery</p>
+          <p class="prompt_lever_text">Summarize what you currently think I want</p>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <script src="../script.js"></script>

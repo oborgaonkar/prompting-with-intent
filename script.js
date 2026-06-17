@@ -5,7 +5,7 @@
       href: "index.html"
     },
     {
-      label: "Why AI Fails Predictably?",
+      label: "Why AI Fails Predictably",
       href: "topics/2-why-ai-fails.html"
     },
     {
@@ -30,7 +30,7 @@
           href: "topics/12-process.html"
         },
         {
-          label: "Prompt Depth",
+          label: "Prompt Effort",
           href: "topics/7-prompt-depth.html"
         },
         {
@@ -51,7 +51,7 @@
           href: "topics/9-output-evaluation.html"
         },
         {
-          label: "Iteration & Recovery",
+          label: "Iteration Or Recovery",
           href: "topics/10-iteration-and-recovery.html"
         },
         {
